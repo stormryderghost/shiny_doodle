@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our latest blog posts on wellness, herbal remedies, and more. Stay informed and inspired with Leaflet.">
-    <title>Blog - Leaflet</title>
+    <title>Leaflet - Herbal Remedies Blog</title>
     <!-- Cookie Consent -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="f3f93259-6697-4723-b8df-cac3ff67852e" data-blockingmode="auto" type="text/javascript"></script>
     <script id="CookieDeclaration" src="https://consent.cookiebot.com/f3f93259-6697-4723-b8df-cac3ff67852e/cd.js" type="text/javascript" async></script>
@@ -19,75 +18,144 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Toolbar -->
-    <header class="toolbar">
-        <div class="toolbar-content">
-            <nav class="toolbar-nav">
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <!-- Categories Dropdown -->
-                    <div class="dropdown">
-                        <button class="dropbtn">Categories</button>
-                        <div class="dropdown-content">
-                            <a href="blog/herbal-remedies.html">Herbal Remedies</a>
-                            <a href="blog/wellness.html">Wellness</a>
-                            <a href="blog/health.html">Health</a>
-                            <a href="blog/adaptogens.html">Adaptogens</a>
-                            <a href="blog/superfoods.html">Superfoods</a>
-                            <a href="blog/collagen.html">Collagen</a>
-                            <a href="blog/sleep-aids.html">Sleep Aids</a>
-                            <a href="blog/hormone-balance.html">Hormone Balance</a>
-                            <a href="blog/herbal-infused-oils.html">Herbal Infused Oils and Butters</a>
-                            <a href="blog/herbal-tinctures.html">Herbal Tinctures</a>
-                            <a href="blog/herbal-salves.html">Herbal Salves and Balms</a>
-                            <a href="blog/herbal-teas.html">Herbal Teas and Infusions</a>
-                            <a href="blog/herbal-bath-soaks.html">Herbal Bath Soaks</a>
-                            <a href="blog/history-of-herbal-medicine.html">The History of Herbal Medicine</a>
-                            <a href="blog/herbal-folklore.html">Herbal Folklore and Traditions</a>
-                            <a href="blog/famous-herbalists.html">Famous Herbalists and Their Contributions</a>
-                            <a href="blog/adaptogenic-herbs.html">Adaptogenic Herbs for Energy and Stamina</a>
-                            <a href="blog/superfood-supplements.html">Superfood Supplements</a>
-                            <a href="blog/collagen-supplements.html">Collagen Supplements</a>
-                            <a href="blog/cbd-oil.html">CBD Oil</a>
-                            <a href="blog/probiotic-supplements.html">Probiotic Supplements</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent-banner">
+        <p>We use cookies to improve your experience on our site. By continuing to browse, you agree to our use of cookies. <a href="privacy-policy.html">Learn more</a></p>
+        <button class="cookie-consent-button">Got it!</button>
+    </div>
+
+    <!-- Header (Sticky & Transparent Until Scroll) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Leaflet</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories/index.html">Blog Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
             </nav>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cta-button">
+                <a href="subscribe.html">Subscribe</a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="content">
-        <section id="blog">
-            <h2>Blog Posts</h2>
-            <div class="post">
-                <h3><a href="blog/post1.html">Blog Post Title 1</a></h3>
-                <p>Summary of the blog post goes here. This is a brief description to entice readers.</p>
-                <a href="blog/post1.html" class="btn btn-secondary">Read More</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Leaflet</h1>
+            <p>Healing with Nature’s Best</p>
+            <a href="categories/herbal-remedies/index.html" class="cta-button">Explore Herbal Remedies</a>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Featured Posts Section -->
+        <section class="featured-posts">
+            <h2>Featured Posts</h2>
+            <div class="posts-grid">
+                <article class="post">
+                    <a href="blog/herbal-remedies/index.html">
+                        <img src="images/herbal-remedies-thumbnail.jpg" alt="Herbal Remedies">
+                        <h3>Discover Herbal Remedies</h3>
+                        <p>Explore the best herbal remedies for various health issues.</p>
+                    </a>
+                </article>
+                <article class="post">
+                    <a href="blog/adaptogens/index.html">
+                        <img src="images/adaptogens-thumbnail.jpg" alt="Adaptogens">
+                        <h3>Boost Your Energy with Adaptogens</h3>
+                        <p>Learn about adaptogenic herbs that enhance your stamina.</p>
+                    </a>
+                </article>
+                <!-- Add more featured posts as needed -->
             </div>
-            <div class="post">
-                <h3><a href="blog/post2.html">Blog Post Title 2</a></h3>
-                <p>Summary of the blog post goes here. This is a brief description to entice readers.</p>
-                <a href="blog/post2.html" class="btn btn-secondary">Read More</a>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="categories-grid">
+                <a href="categories/herbal-remedies.html" class="category">
+                    <img src="images/herbal-remedies-category.jpg" alt="Herbal Remedies">
+                    <h3>Herbal Remedies</h3>
+                </a>
+                <a href="categories/adaptogens.html" class="category">
+                    <img src="images/adaptogens-category.jpg" alt="Adaptogens">
+                    <h3>Adaptogens</h3>
+                </a>
+                <a href="categories/superfoods.html" class="category">
+                    <img src="images/superfoods-category.jpg" alt="Superfoods">
+                    <h3>Superfoods</h3>
+                </a>
+                <!-- Add more categories as needed -->
             </div>
-            <!-- Add more posts as needed -->
+        </section>
+
+        <!-- Recent Posts Section -->
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="posts-list">
+                <article class="post">
+                    <a href="blog/superfoods/superfood-supplements-post.html">
+                        <h3>Superfood Supplements for Optimal Nutrition</h3>
+                        <p>Discover the benefits of superfood supplements for your health.</p>
+                    </a>
+                </article>
+                <!-- Add more recent posts as needed -->
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter to get the latest updates and tips on herbal remedies.</p>
+            <form action="subscribe.html" method="post">
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2024 Leaflet. All Rights Reserved.</p>
+            <div class="footer-about">
+                <p>© 2024 Leaflet. All Rights Reserved.</p>
+                <p>Rooted in nature, powered by science.</p>
+            </div>
             <div class="footer-links">
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms-of-service.html">Terms of Service</a>
             </div>
+            <div class="footer-social">
+                <a href="https://facebook.com" class="fab fa-facebook-f"></a>
+                <a href="https://instagram.com" class="fab fa-instagram"></a>
+                <a href="https://pinterest.com" class="fab fa-pinterest"></a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact us: <a href="mailto:info@leaflet.com">info@leaflet.com</a></p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
