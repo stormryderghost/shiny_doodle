@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Famous Herbalists - Leaflet</title>
+    <title>CBD - Leaflet</title>
     <!-- Cookie Consent -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="f3f93259-6697-4723-b8df-cac3ff67852e" data-blockingmode="auto" type="text/javascript"></script>
     <script id="CookieDeclaration" src="https://consent.cookiebot.com/f3f93259-6697-4723-b8df-cac3ff67852e/cd.js" type="text/javascript" async></script>
@@ -36,12 +36,12 @@
     <!-- Main Content -->
     <main id="content">
         <section id="category-overview">
-            <h2>Famous Herbalists</h2>
-            <p>Explore the contributions of influential herbalists throughout history and their impact on herbal medicine.</p>
+            <h2>CBD</h2>
+            <p>CBD (Cannabidiol) is a natural compound found in cannabis that is praised for its potential therapeutic benefits, including pain relief and anxiety reduction. Discover more about CBD and its uses.</p>
             <div class="post">
-                <h3><a href="famous-herbalists-post.html">Famous Herbalists and Their Contributions</a></h3>
-                <p>Highlight influential herbalists throughout history and their contributions to the field of herbal medicine.</p>
-                <a href="famous-herbalists-post.html" class="btn btn-secondary">Read More</a>
+                <h3><a href="cbd-oil-post.html">CBD Oil: A Natural Remedy for Pain and Anxiety</a></h3>
+                <p>Explore the benefits of CBD oil for pain relief and anxiety reduction, and learn how this natural remedy can improve your well-being.</p>
+                <a href="cbd-oil-post.html" class="btn btn-secondary">Read More</a>
             </div>
             <!-- Add more posts as needed -->
         </section>
