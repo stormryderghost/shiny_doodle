@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Salves and Balms: Recipes for Soothing Skin Conditions - Leaflet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="content">
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>Herbal Salves and Balms: Recipes for Soothing Skin Conditions</h1>
+                <p><strong>Author:</strong> Your Name | <strong>Date:</strong> September 17, 2024</p>
+            </header>
+            <section class="post-content">
+                <p>Herbal salves and balms are perfect for soothing dry skin, eczema, and other skin irritations. They're easy to make and can be customized to your needs.</p>
+                
+                <h2>Basic Herbal Salve Recipe</h2>
+                <ul>
+                    <li>Melt 1 cup of beeswax with 1 cup of infused herbal oil.</li>
+                    <li>Add a few drops of essential oils like lavender or tea tree.</li>
+                    <li>Pour into tins or jars and let cool.</li>
+                </ul>
+                <p>Check out <a href="https://affiliate-link.com/salve-kit" target="_blank">this salve-making kit</a> for an easy DIY experience!</p>
+
+                <h2>Herbal Balm for Skin Conditions</h2>
+                <p>Balm recipes are similar to salves but typically softer and easier to apply. You can infuse herbs like comfrey, calendula, or chamomile to make a soothing balm for skin conditions.</p>
+                <p>For a simple start, try <a href="https://affiliate-link.com/balm-kit" target="_blank">this balm kit</a> for skin relief.</p>
+            </section>
+            <footer class="post-footer">
+                <p>Tags: Herbal Remedies, Skincare</p>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>

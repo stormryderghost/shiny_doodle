@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptogenic Herbs for Energy and Stamina - Leaflet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="content">
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>Adaptogenic Herbs for Energy and Stamina</h1>
+                <p><strong>Author:</strong> Your Name | <strong>Date:</strong> September 21, 2024</p>
+            </header>
+            <section class="post-content">
+                <p>Adaptogenic herbs are known for their ability to help the body adapt to stress and enhance overall vitality. Here are some of the most effective adaptogenic herbs for boosting energy levels and stamina:</p>
+                
+                <h2>Ginseng</h2>
+                <p>Ginseng has been used in traditional medicine for centuries. It's known for its ability to improve energy, reduce fatigue, and enhance mental clarity.</p>
+                <a href="https://affiliate-link.com/ginseng-supplement" target="_blank">Explore Ginseng Supplements</a>
+                
+                <h2>Rhodiola</h2>
+                <p>Rhodiola is another powerful adaptogen that helps combat fatigue and boost physical and mental performance. It's particularly useful for those facing stressful conditions.</p>
+                <a href="https://affiliate-link.com/rhodiola" target="_blank">Find Rhodiola Products</a>
+                
+                <h2>Maca</h2>
+                <p>Maca root is renowned for its energy-boosting and stamina-enhancing properties. It supports endurance and overall vitality.</p>
+                <a href="https://affiliate-link.com/maca-supplement" target="_blank">Buy Maca Supplements Here</a>
+                
+                <p>Incorporate these adaptogenic herbs into your routine to experience increased energy and stamina. Check out the links for the best products available.</p>
+            </section>
+            <footer class="post-footer">
+                <p>Tags: Adaptogens, Energy, Stamina</p>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
