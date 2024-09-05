@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Legend of the Willow Tree - Herbal Remedies Blog</title>
     <!-- Link to CSS stylesheet -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"> <!-- Ensure this path is correct -->
 </head>
 <body>
     <!-- Header -->

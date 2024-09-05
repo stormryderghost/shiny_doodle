@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="shiny_doodle/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Eagle+Lake:wght@400&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
@@ -19,33 +19,25 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="toolbar" id="header">
+    <header class="toolbar">
         <div class="toolbar-content">
             <nav class="toolbar-nav">
                 <div class="nav-links">
-                    <a href="shiny_doodle/index.html">Home</a>
-                    <a href="shiny_doodle/blog.html">Blog</a>
-                    <div class="dropdown">
-                        <a href="#">Categories</a>
-                        <div class="dropdown-content">
-                            <a href="shiny_doodle/herbal-remedies/general-herbal-information.html">General Herbal Information</a>
-                            <a href="shiny_doodle/herbal-remedies/herbal-recipes-diy-projects.html">Herbal Recipes & DIY Projects</a>
-                            <a href="shiny_doodle/herbal-remedies/herbal-remedies-for-specific-conditions.html">Herbal Remedies for Specific Conditions</a>
-                            <a href="shiny_doodle/herbal-remedies/herbal-wisdom-folklore.html">Herbal Wisdom & Folklore</a>
-                            <a href="shiny_doodle/herbal-remedies/community-resources.html">Community Resources</a>
-                        </div>
-                    </div>
-                    <a href="shiny_doodle/about.html">About</a>
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="categories.html">Categories</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="legal-links">
-                    <a href="shiny_doodle/privacy-policy.html">Privacy Policy</a>
-                    <a href="shiny_doodle/terms-of-service.html">Terms of Service</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
                 </div>
                 <div class="search-icon">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="cta-button">
-                    <a href="shiny_doodle/subscribe.html">Get Remedies Guide</a>
+                    <a href="subscribe.html">Get Remedies Guide</a>
                 </div>
             </nav>
         </div>
@@ -53,11 +45,11 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="shiny_doodle/path/to/hero-image.jpg" alt="Hero Image">
+        <img src="images/hero-image.jpg" alt="Hero Image">
         <div class="hero-text">
             <h1>Healing with Nature’s Best</h1>
-            <p id="tagline"></p> <!-- Tagline with typewriter effect -->
-            <a href="shiny_doodle/blog.html" class="btn btn-primary">Explore Herbal Remedies</a>
+            <p class="typewriter">Cultivating Truth, Harvesting Wellness</p>
+            <a href="blog.html" class="btn btn-primary">Explore Herbal Remedies</a>
         </div>
     </section>
 
@@ -68,8 +60,8 @@
             <div class="post-grid">
                 <!-- Example Post -->
                 <div class="post">
-                    <a href="shiny_doodle/blog/herbal-remedies/your-herbal-remedy-post.html">
-                        <img src="shiny_doodle/path/to/featured-post-image.jpg" alt="Featured Post">
+                    <a href="herbal-remedies/general-herbal-information.html">
+                        <img src="images/featured-post-image.jpg" alt="Featured Post">
                         <h3>Title of Featured Post</h3>
                         <p>Short description of the featured post.</p>
                     </a>
@@ -82,32 +74,32 @@
             <h2>Herbal Remedy Categories</h2>
             <div class="category-grid">
                 <div class="category">
-                    <a href="shiny_doodle/herbal-remedies/general-herbal-information.html">
-                        <img src="shiny_doodle/path/to/category-image.jpg" alt="General Herbal Information">
+                    <a href="herbal-remedies/general-herbal-information.html">
+                        <img src="images/category-image.jpg" alt="General Herbal Information">
                         <h3>General Herbal Information</h3>
                     </a>
                 </div>
                 <div class="category">
-                    <a href="shiny_doodle/herbal-remedies/herbal-recipes-diy-projects.html">
-                        <img src="shiny_doodle/path/to/category-image.jpg" alt="Herbal Recipes & DIY Projects">
+                    <a href="herbal-remedies/herbal-recipes-diy-projects.html">
+                        <img src="images/category-image.jpg" alt="Herbal Recipes & DIY Projects">
                         <h3>Herbal Recipes & DIY Projects</h3>
                     </a>
                 </div>
                 <div class="category">
-                    <a href="shiny_doodle/herbal-remedies/herbal-remedies-for-specific-conditions.html">
-                        <img src="shiny_doodle/path/to/category-image.jpg" alt="Herbal Remedies for Specific Conditions">
+                    <a href="herbal-remedies/herbal-remedies-for-specific-conditions.html">
+                        <img src="images/category-image.jpg" alt="Herbal Remedies for Specific Conditions">
                         <h3>Herbal Remedies for Specific Conditions</h3>
                     </a>
                 </div>
                 <div class="category">
-                    <a href="shiny_doodle/herbal-remedies/herbal-wisdom-folklore.html">
-                        <img src="shiny_doodle/path/to/category-image.jpg" alt="Herbal Wisdom & Folklore">
+                    <a href="herbal-remedies/herbal-wisdom-folklore.html">
+                        <img src="images/category-image.jpg" alt="Herbal Wisdom & Folklore">
                         <h3>Herbal Wisdom & Folklore</h3>
                     </a>
                 </div>
                 <div class="category">
-                    <a href="shiny_doodle/herbal-remedies/community-resources.html">
-                        <img src="shiny_doodle/path/to/category-image.jpg" alt="Community Resources">
+                    <a href="herbal-remedies/community-resources.html">
+                        <img src="images/category-image.jpg" alt="Community Resources">
                         <h3>Community Resources</h3>
                     </a>
                 </div>
@@ -119,8 +111,8 @@
             <div class="recent-posts-list">
                 <!-- Example Recent Post -->
                 <div class="post">
-                    <a href="shiny_doodle/blog/adaptogens/adaptogenic-herbs-post.html">
-                        <h3>Adaptogenic Herbs for Energy and Stamina</h3>
+                    <a href="herbal-remedies/general-herbal-information.html">
+                        <h3>General Herbal Information Post</h3>
                         <p>Brief summary of the recent post.</p>
                     </a>
                 </div>
@@ -131,7 +123,7 @@
         <section id="newsletter">
             <h2>Stay Updated</h2>
             <p>Subscribe to our newsletter for the latest updates and exclusive content.</p>
-            <form action="shiny_doodle/subscribe.html" method="post">
+            <form action="subscribe.html" method="post">
                 <input type="email" placeholder="Enter your email" required>
                 <button type="submit" class="btn btn-secondary">Subscribe</button>
             </form>
@@ -141,44 +133,27 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Footer content here -->
+            <!-- Add footer content here -->
         </div>
     </footer>
 
-    <!-- JavaScript for Typewriter Effect and Sticky Header -->
+    <!-- JavaScript for Typewriter Effect -->
     <script>
-        function typeWriter(elementId, text, speed) {
-            let i = 0;
-            const element = document.getElementById(elementId);
-            
-            function typing() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typing, speed);
+        document.addEventListener("DOMContentLoaded", function() {
+            const typewriter = document.querySelector('.typewriter');
+            const text = "Cultivating Truth, Harvesting Wellness";
+            let index = 0;
+
+            function type() {
+                if (index < text.length) {
+                    typewriter.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 100);
                 }
             }
 
-            typing();
-        }
-
-        // Initialize typewriter effect
-        typeWriter('tagline', 'Cultivating Truth, Harvesting Wellness', 100);
-    </script>
-
-    <script>
-        window.onscroll = function() {stickFunction()};
-
-        var header = document.getElementById("header");
-        var sticky = header.offsetTop;
-
-        function stickFunction() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
+            type();
+        });
     </script>
 </body>
 </html>
