@@ -19,14 +19,23 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="toolbar">
+    <header class="toolbar" id="header">
         <div class="toolbar-content">
             <nav class="toolbar-nav">
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="blog.html">Blog</a>
+                    <div class="dropdown">
+                        <a href="#">Categories</a>
+                        <div class="dropdown-content">
+                            <a href="herbal-remedies/general-herbal-information.html">General Herbal Information</a>
+                            <a href="herbal-remedies/herbal-recipes-diy-projects.html">Herbal Recipes & DIY Projects</a>
+                            <a href="herbal-remedies/herbal-remedies-for-specific-conditions.html">Herbal Remedies for Specific Conditions</a>
+                            <a href="herbal-remedies/herbal-wisdom-folklore.html">Herbal Wisdom & Folklore</a>
+                            <a href="herbal-remedies/community-resources.html">Community Resources</a>
+                        </div>
+                    </div>
                     <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="legal-links">
                     <a href="privacy-policy.html">Privacy Policy</a>
@@ -36,7 +45,7 @@
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="cta-button">
-                    <a href="subscribe.html">Subscribe</a>
+                    <a href="subscribe.html">Get Remedies Guide</a>
                 </div>
             </nav>
         </div>
@@ -47,7 +56,7 @@
         <img src="path/to/hero-image.jpg" alt="Hero Image">
         <div class="hero-text">
             <h1>Healing with Nature’s Best</h1>
-            <p>Discover the latest in herbal remedies and wellness.</p>
+            <p id="tagline"></p> <!-- Tagline with typewriter effect -->
             <a href="blog.html" class="btn btn-primary">Explore Herbal Remedies</a>
         </div>
     </section>
@@ -59,7 +68,7 @@
             <div class="post-grid">
                 <!-- Example Post -->
                 <div class="post">
-                    <a href="blog/herbal-remedies/your-herbal-remedy-post.html">
+                    <a href="herbal-remedies/general-herbal-information.html">
                         <img src="path/to/featured-post-image.jpg" alt="Featured Post">
                         <h3>Title of Featured Post</h3>
                         <p>Short description of the featured post.</p>
@@ -73,57 +82,33 @@
             <h2>Herbal Remedy Categories</h2>
             <div class="category-grid">
                 <div class="category">
-                    <a href="categories/herbal-remedies.html">
-                        <img src="path/to/category-image.jpg" alt="Herbal Remedies">
-                        <h3>Herbal Remedies</h3>
+                    <a href="herbal-remedies/general-herbal-information.html">
+                        <img src="path/to/category-image.jpg" alt="General Herbal Information">
+                        <h3>General Herbal Information</h3>
                     </a>
                 </div>
                 <div class="category">
-                    <a href="categories/adaptogens.html">
-                        <img src="path/to/category-image.jpg" alt="Adaptogens">
-                        <h3>Adaptogens</h3>
+                    <a href="herbal-remedies/herbal-recipes-diy-projects.html">
+                        <img src="path/to/category-image.jpg" alt="Herbal Recipes & DIY Projects">
+                        <h3>Herbal Recipes & DIY Projects</h3>
                     </a>
                 </div>
                 <div class="category">
-                    <a href="categories/superfoods.html">
-                        <img src="path/to/category-image.jpg" alt="Superfoods">
-                        <h3>Superfoods</h3>
+                    <a href="herbal-remedies/herbal-remedies-for-specific-conditions.html">
+                        <img src="path/to/category-image.jpg" alt="Herbal Remedies for Specific Conditions">
+                        <h3>Herbal Remedies for Specific Conditions</h3>
                     </a>
                 </div>
                 <div class="category">
-                    <a href="categories/collagen.html">
-                        <img src="path/to/category-image.jpg" alt="Collagen">
-                        <h3>Collagen</h3>
+                    <a href="herbal-remedies/herbal-wisdom-folklore.html">
+                        <img src="path/to/category-image.jpg" alt="Herbal Wisdom & Folklore">
+                        <h3>Herbal Wisdom & Folklore</h3>
                     </a>
                 </div>
                 <div class="category">
-                    <a href="categories/cbd.html">
-                        <img src="path/to/category-image.jpg" alt="CBD">
-                        <h3>CBD</h3>
-                    </a>
-                </div>
-                <div class="category">
-                    <a href="categories/probiotics.html">
-                        <img src="path/to/category-image.jpg" alt="Probiotics">
-                        <h3>Probiotics</h3>
-                    </a>
-                </div>
-                <div class="category">
-                    <a href="categories/history.html">
-                        <img src="path/to/category-image.jpg" alt="History">
-                        <h3>History</h3>
-                    </a>
-                </div>
-                <div class="category">
-                    <a href="categories/folklore.html">
-                        <img src="path/to/category-image.jpg" alt="Folklore">
-                        <h3>Folklore</h3>
-                    </a>
-                </div>
-                <div class="category">
-                    <a href="categories/famous-herbalists.html">
-                        <img src="path/to/category-image.jpg" alt="Famous Herbalists">
-                        <h3>Famous Herbalists</h3>
+                    <a href="herbal-remedies/community-resources.html">
+                        <img src="path/to/category-image.jpg" alt="Community Resources">
+                        <h3>Community Resources</h3>
                     </a>
                 </div>
             </div>
@@ -134,8 +119,8 @@
             <div class="recent-posts-list">
                 <!-- Example Recent Post -->
                 <div class="post">
-                    <a href="blog/adaptogens/adaptogenic-herbs-post.html">
-                        <h3>Adaptogenic Herbs for Energy and Stamina</h3>
+                    <a href="herbal-remedies/general-herbal-information.html">
+                        <h3>Recent Post Title</h3>
                         <p>Brief summary of the recent post.</p>
                     </a>
                 </div>
@@ -156,4 +141,46 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div
+            <!-- Add footer content here -->
+        </div>
+    </footer>
+
+    <!-- Typewriter Effect Script -->
+    <script>
+        function typeWriter(elementId, text, speed) {
+            let i = 0;
+            const element = document.getElementById(elementId);
+            
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+                }
+            }
+
+            typing();
+        }
+
+        // Initialize typewriter effect
+        typeWriter('tagline', 'Cultivating Truth, Harvesting Wellness', 100);
+    </script>
+
+    <!-- Sticky Header Script -->
+    <script>
+        window.onscroll = function() {stickFunction()};
+
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        function stickFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
+
