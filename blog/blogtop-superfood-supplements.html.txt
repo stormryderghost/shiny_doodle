@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superfood Supplements: A Nutrition Boost - Leaflet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="content">
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>Superfood Supplements: A Nutrition Boost</h1>
+                <p><strong>Author:</strong> Your Name | <strong>Date:</strong> September 22, 2024</p>
+            </header>
+            <section class="post-content">
+                <p>Superfood supplements are packed with essential nutrients and offer numerous health benefits. Here are some top superfoods to consider for a nutritional boost:</p>
+                
+                <h2>Spirulina</h2>
+                <p>Spirulina is a blue-green algae rich in proteins, vitamins, and antioxidants. It supports overall health and provides a natural energy boost.</p>
+                <a href="https://affiliate-link.com/spirulina" target="_blank">Discover Spirulina Supplements</a>
+                
+                <h2>Chlorella</h2>
+                <p>Chlorella is another algae known for its detoxifying properties and rich nutrient profile. It's excellent for supporting immune function and overall health.</p>
+                <a href="https://affiliate-link.com/chlorella" target="_blank">Find Chlorella Products</a>
+                
+                <h2>Acai Berry</h2>
+                <p>Acai berries are renowned for their high antioxidant content and health benefits. They support heart health and provide a natural energy boost.</p>
+                <a href="https://affiliate-link.com/acai-berry" target="_blank">Buy Acai Berry Supplements</a>
+                
+                <p>These superfood supplements can help enhance your nutritional intake. Explore the links for top-quality products.</p>
+            </section>
+            <footer class="post-footer">
+                <p>Tags: Superfoods, Nutrition, Supplements</p>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
