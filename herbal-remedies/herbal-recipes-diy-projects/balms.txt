@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herbal Salves and Balms: Recipes for Soothing Skin Conditions - Leaflet</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
- <!-- Header -->
+</head> 
+<body>
+  <!-- Header -->
     <header class="toolbar">
         <div class="toolbar-content">
             <nav class="toolbar-nav">
@@ -15,7 +16,7 @@
                     <a href="/shiny_doodle/herbal-remedies/blog.html">Blog</a>
                     <a href="/shiny_doodle/about.html">About</a>
                     <a href="/shiny_doodle/contact.html">Contact</a>
-                     <a href="/shiny_doodle/catagories.html">Catagories</a>
+                     <a href="\shiny_doodle\categories\categories.html">Categories</a>
                 </div>
                 <div class="legal-links">
                     <a href="/shiny_doodle/privacy-policy.html">Privacy Policy</a>
@@ -31,7 +32,8 @@
         </div>
     </header>
 
-<body>
+
+
     <main id="content">
         <article class="blog-post">
             <header class="post-header">
