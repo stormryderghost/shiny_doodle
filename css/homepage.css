@@ -1,7 +1,7 @@
 /* General Styles */
 body {
-    background-color: #F5F5DC; /* Warm Beige */
-    color: #4E342E; /* Deep Brown */
+    background-color: #f4f4f4; /* Light Gray */
+    color: #333; /* Dark Gray */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,8 +9,8 @@ body {
 
 /* Header */
 header.toolbar {
-    background-color: #4A773C; /* Earthy Green */
-    color: #F5F5DC; /* Warm Beige */
+    background-color: #4CAF50; /* Green */
+    color: white;
     padding: 20px;
 }
 
@@ -37,14 +37,14 @@ header .toolbar-nav .legal-links {
 
 header .toolbar-nav .nav-links a,
 header .toolbar-nav .legal-links a {
-    color: #F5F5DC; /* Warm Beige */
+    color: white;
     margin: 0 10px;
     text-decoration: none;
 }
 
 header .toolbar-nav .nav-links a:hover,
 header .toolbar-nav .legal-links a:hover {
-    color: #FF7043; /* Sunset Orange */
+    color: #ff9800; /* Orange */
 }
 
 header .toolbar-nav .search-icon {
@@ -57,15 +57,15 @@ header .toolbar-nav .cta-button {
 }
 
 header .toolbar-nav .cta-button a {
-    background-color: #FF7043; /* Sunset Orange */
-    color: #F5F5DC; /* Warm Beige */
+    background-color: #ff9800; /* Orange */
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 header .toolbar-nav .cta-button a:hover {
-    background-color: #4A773C; /* Earthy Green */
+    background-color: #4CAF50; /* Green */
 }
 
 /* Ensure Mailchimp Pop-up is on top */
@@ -76,7 +76,6 @@ header .toolbar-nav .cta-button a:hover {
 #mcjs {
     display: block !important; /* Ensure the pop-up is displayed */
 }
-
 
 /* Hero Section */
 .hero {
@@ -102,15 +101,15 @@ header .toolbar-nav .cta-button a:hover {
 }
 
 .hero .btn-primary {
-    background-color: #FF7043; /* Sunset Orange */
-    color: #F5F5DC; /* Warm Beige */
+    background-color: #ff9800; /* Orange */
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .hero .btn-primary:hover {
-    background-color: #4A773C; /* Earthy Green */
+    background-color: #4CAF50; /* Green */
 }
 
 /* Main Content Area */
@@ -170,21 +169,21 @@ main#content {
 }
 
 #newsletter .btn-secondary {
-    background-color: #4A773C; /* Earthy Green */
-    color: #F5F5DC; /* Warm Beige */
+    background-color: #4CAF50; /* Green */
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 #newsletter .btn-secondary:hover {
-    background-color: #FF7043; /* Sunset Orange */
+    background-color: #ff9800; /* Orange */
 }
 
 /* Footer */
 footer.footer {
-    background-color: #4E342E; /* Deep Brown */
-    color: #F5F5DC; /* Warm Beige */
+    background-color: #333; /* Dark Gray */
+    color: white;
     padding: 20px;
     text-align: center;
 }
@@ -202,20 +201,20 @@ footer .footer-left, footer .footer-center, footer .footer-right {
 }
 
 footer .footer-center p a {
-    color: #F5F5DC; /* Warm Beige */
+    color: white;
     text-decoration: none;
 }
 
 footer .footer-center p a:hover {
-    color: #FF7043; /* Sunset Orange */
+    color: #ff9800; /* Orange */
 }
 
 footer .social-links a {
-    color: #F5F5DC; /* Warm Beige */
+    color: white;
     margin: 0 10px;
     text-decoration: none;
 }
 
 footer .social-links a:hover {
-    color: #FF7043; /* Sunset Orange */
+    color: #ff9800; /* Orange */
 }
