@@ -10,12 +10,139 @@
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="/shiny_doodle/css/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Eagle+Lake:wght@400&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inline CSS Styles -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light Gray */
+            color: #333; /* Dark Gray */
+        }
+
+        /* Header Styles */
+        header.toolbar {
+            background-color: #264653; /* Dark Blue */
+            color: white;
+            padding: 10px 0;
+        }
+
+        header .toolbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .toolbar-nav .nav-links a,
+        header .toolbar-nav .legal-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        header .toolbar-nav .nav-links a:hover,
+        header .toolbar-nav .legal-links a:hover {
+            background-color: #f4a261; /* Light Coral */
+        }
+
+        header .toolbar-nav .search-icon {
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header .toolbar-nav .cta-button a {
+            background-color: #e76f51; /* Coral */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        header .toolbar-nav .cta-button a:hover {
+            background-color: #f4a261; /* Light Coral */
+        }
+
+        /* Main Content Styles */
+        main#content {
+            padding: 20px;
+        }
+
+        main#content h2 {
+            color: #2a9d8f; /* Teal */
+        }
+
+        main#content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        main#content ul li {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ensure images fit within their container */
+        main#content ul li img {
+            max-width: 100%; /* Ensure images do not overflow their container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Prevent inline spacing issues */
+            margin: 0 auto; /* Center image horizontally */
+            border: 0; /* Remove any border styles */
+            box-shadow: none; /* Ensure no shadow effects */
+            background: transparent; /* Ensure no background color */
+        }
+
+        /* Ensure no unwanted effects on image containers */
+        main#content ul li {
+            overflow: hidden; /* Prevent image overflow */
+        }
+
+        /* Ensure links have consistent styles */
+        main#content ul li a {
+            color: #2a9d8f; /* Teal */
+            text-decoration: none;
+        }
+
+        main#content ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer.footer {
+            background-color: #264653; /* Dark Blue */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer.footer a {
+            color: #2a9d8f; /* Teal */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer.footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer.footer .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+        }
+
+        footer.footer .social-links a:hover {
+            color: #2a9d8f; /* Teal */
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
