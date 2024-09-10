@@ -30,29 +30,46 @@
             background-color: #264653; /* Dark Blue */
             color: white;
             padding: 10px 0;
+            position: relative; /* Positioning context for toolbar elements */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
         }
 
         header .toolbar-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px; /* Limiting max width */
+            margin: 0 auto; /* Center the toolbar */
+            padding: 0 20px;
+        }
+
+        header .toolbar-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header .toolbar-nav .nav-links {
+            display: flex;
         }
 
         header .toolbar-nav .nav-links a,
         header .toolbar-nav .legal-links a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px 15px; /* Adjusted padding for better spacing */
+            font-size: 16px; /* Consistent font size */
         }
 
         header .toolbar-nav .nav-links a:hover,
         header .toolbar-nav .legal-links a:hover {
             background-color: #f4a261; /* Light Coral */
+            border-radius: 5px; /* Rounded corners on hover */
         }
 
         header .toolbar-nav .search-icon {
             color: white;
-            padding: 10px 20px;
+            padding: 10px;
+            font-size: 20px; /* Larger icon size */
         }
 
         header .toolbar-nav .cta-button a {
@@ -61,6 +78,7 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: bold; /* Bold text for CTA */
         }
 
         header .toolbar-nav .cta-button a:hover {
@@ -160,9 +178,7 @@
                     <a href="/shiny_doodle/privacy-policy.html">Privacy Policy</a>
                     <a href="/shiny_doodle/terms-of-service.html">Terms of Service</a>
                 </div>
-                <div class="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
+               
                 <div class="cta-button">
                     <a href="/shiny_doodle/subscribe.html">Get Remedies Guide</a>
                 </div>
