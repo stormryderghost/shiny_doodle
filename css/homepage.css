@@ -68,6 +68,16 @@ header .toolbar-nav .cta-button a:hover {
     background-color: #4A773C; /* Earthy Green */
 }
 
+/* Ensure Mailchimp Pop-up is on top */
+#mcjs {
+    z-index: 9999; /* Ensure the pop-up is on top */
+    position: relative; /* Ensure it is positioned correctly */
+}
+#mcjs {
+    display: block !important; /* Ensure the pop-up is displayed */
+}
+
+
 /* Hero Section */
 .hero {
     background-color: #D1C4E9; /* Calm Lavender */
