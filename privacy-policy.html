@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy   
- | Shiny Doodle - Herbal Remedies and Natural Healing</title>
+    <title>Privacy Policy | Shiny Doodle - Herbal Remedies and Natural Healing</title>
 
     <meta name="description" content="Learn about our commitment to protecting your privacy at Shiny Doodle. We explain how we collect, use, and safeguard your personal information.">
     <meta name="keywords" content="privacy policy, herbal remedies, natural healing, data protection, personal information">
@@ -17,17 +16,168 @@
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Privacy   
- Policy | Shiny Doodle">
+    <meta name="twitter:title" content="Privacy Policy | Shiny Doodle">
     <meta name="twitter:description" content="Learn about our commitment to protecting your privacy at Shiny Doodle.">
     <meta name="twitter:image" content="https://yourdomain.com/images/privacy-policy-image.jpg">
 
     <link rel="canonical" href="https://yourdomain.com/privacy-policy.html">
 
     <link rel="stylesheet" href="/shiny_doodle/css/style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light Gray */
+            color: #333; /* Dark Gray */
+        }
+
+        /* Header Styles */
+        header.toolbar {
+            background-color: #264653; /* Dark Blue */
+            color: white;
+            padding: 10px 0;
+            position: relative; /* Positioning context for toolbar elements */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+        }
+
+        header .toolbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px; /* Limiting max width */
+            margin: 0 auto; /* Center the toolbar */
+            padding: 0 20px;
+        }
+
+        header .toolbar-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header .toolbar-nav .nav-links {
+            display: flex;
+        }
+
+        header .toolbar-nav .nav-links a,
+        header .toolbar-nav .legal-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px; /* Adjusted padding for better spacing */
+            font-size: 16px; /* Consistent font size */
+        }
+
+        header .toolbar-nav .nav-links a:hover,
+        header .toolbar-nav .legal-links a:hover {
+            background-color: #f4a261; /* Light Coral */
+            border-radius: 5px; /* Rounded corners on hover */
+        }
+
+        header .toolbar-nav .search-icon {
+            color: white;
+            padding: 10px;
+            font-size: 20px; /* Larger icon size */
+        }
+
+        header .toolbar-nav .cta-button a {
+            background-color: #e76f51; /* Coral */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold; /* Bold text for CTA */
+        }
+
+        header .toolbar-nav .cta-button a:hover {
+            background-color: #f4a261; /* Light Coral */
+        }
+
+        /* Main Content Styles */
+        main#content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        main#content h2 {
+            color: #2a9d8f; /* Teal */
+        }
+
+        main#content h3 {
+            color: #2a9d8f; /* Teal */
+        }
+
+        main#content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        main#content ul li {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ensure images fit within their container */
+        main#content ul li img {
+            max-width: 100%; /* Ensure images do not overflow their container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Prevent inline spacing issues */
+            margin: 0 auto; /* Center image horizontally */
+            border: 0; /* Remove any border styles */
+            box-shadow: none; /* Ensure no shadow effects */
+            background: transparent; /* Ensure no background color */
+        }
+
+        /* Ensure no unwanted effects on image containers */
+        main#content ul li {
+            overflow: hidden; /* Prevent image overflow */
+        }
+
+        /* Ensure links have consistent styles */
+        main#content ul li a {
+            color: #2a9d8f; /* Teal */
+            text-decoration: none;
+        }
+
+        main#content ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer.footer {
+            background-color: #264653; /* Dark Blue */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer.footer a {
+            color: #2a9d8f; /* Teal */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer.footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer.footer .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+        }
+
+        footer.footer .social-links a:hover {
+            color: #2a9d8f; /* Teal */
+        }
+    </style>
 </head>
 <body>
-   <!-- Header -->
+    <!-- Header -->
     <header class="toolbar">
         <div class="toolbar-content">
             <nav class="toolbar-nav">
@@ -36,7 +186,7 @@
                     <a href="/shiny_doodle/herbal-remedies/blog.html">Blog</a>
                     <a href="/shiny_doodle/about.html">About</a>
                     <a href="/shiny_doodle/contact.html">Contact</a>
-                     <a href="\shiny_doodle\categories\categories.html">Categories</a>
+                    <a href="/shiny_doodle/categories/categories.html">Categories</a>
                 </div>
                 <div class="legal-links">
                     <a href="/shiny_doodle/privacy-policy.html">Privacy Policy</a>
@@ -58,7 +208,7 @@
             <div class="container">
                 <h2>Privacy Policy</h2>
                 <p>Effective Date: [Insert Date]</p>
-                <p>Welcome to Leaflet! Your privacy is important to us. This privacy policy outlines how we collect, use, disclose, and safeguard your information when you visit our website [https://example.com]. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+                <p>Welcome to Shiny Doodle! Your privacy is important to us. This privacy policy outlines how we collect, use, disclose, and safeguard your information when you visit our website [https://example.com]. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
 
                 <h3>1. Information We Collect</h3>
                 <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
@@ -106,7 +256,7 @@
         </section>
     </main>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <!-- Footer Left Section -->
