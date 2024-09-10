@@ -9,7 +9,7 @@ body {
 
 /* Header Styles */
 header.toolbar {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green */
     color: white;
     padding: 10px 0;
 }
@@ -29,7 +29,7 @@ header .toolbar-nav .legal-links a {
 
 header .toolbar-nav .nav-links a:hover,
 header .toolbar-nav .legal-links a:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker Green */
 }
 
 header .toolbar-nav .search-icon {
@@ -38,7 +38,7 @@ header .toolbar-nav .search-icon {
 }
 
 header .toolbar-nav .cta-button a {
-    background-color: #ff9800;
+    background-color: #ff9800; /* Orange */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -46,24 +46,33 @@ header .toolbar-nav .cta-button a {
 }
 
 header .toolbar-nav .cta-button a:hover {
-    background-color: #e68900;
+    background-color: #e68900; /* Darker Orange */
 }
 
 /* Main Content Styles */
-main#content {
+main {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-main#content h2 {
-    color: #4CAF50;
+main h1 {
+    color: #4CAF50; /* Green */
 }
 
-main#content ul {
+main p, main ul {
+    line-height: 1.6;
+}
+
+main ul {
     list-style-type: none;
     padding: 0;
 }
 
-main#content ul li {
+main ul li {
     background-color: white;
     padding: 10px;
     margin-bottom: 10px;
@@ -71,25 +80,25 @@ main#content ul li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-main#content ul li a {
-    color: #4CAF50;
+main ul li a {
+    color: #4CAF50; /* Green */
     text-decoration: none;
 }
 
-main#content ul li a:hover {
+main ul li a:hover {
     text-decoration: underline;
 }
 
 /* Footer Styles */
 footer.footer {
-    background-color: #333;
+    background-color: #333; /* Dark Gray */
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
 footer.footer a {
-    color: #4CAF50;
+    color: #4CAF50; /* Green */
     text-decoration: none;
     margin: 0 10px;
 }
@@ -105,5 +114,5 @@ footer.footer .social-links a {
 }
 
 footer.footer .social-links a:hover {
-    color: #4CAF50;
+    color: #4CAF50; /* Green */
 }
