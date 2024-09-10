@@ -1,26 +1,16 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4; /* Light Gray */
     color: #333; /* Dark Gray */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    color: #2a9d8f; /* Teal */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header Styles */
+/* Header */
 header.toolbar {
     background-color: #264653; /* Dark Blue */
-    color: #fff; /* White */
+    color: white;
     padding: 20px;
 }
 
@@ -47,7 +37,7 @@ header .toolbar-nav .legal-links {
 
 header .toolbar-nav .nav-links a,
 header .toolbar-nav .legal-links a {
-    color: #fff; /* White */
+    color: white;
     margin: 0 10px;
     text-decoration: none;
 }
@@ -57,6 +47,10 @@ header .toolbar-nav .legal-links a:hover {
     color: #f4a261; /* Light Coral */
 }
 
+header .toolbar-nav .search-icon {
+    margin-left: auto;
+}
+
 header .toolbar-nav .cta-button {
     margin-left: 20px;
     flex-shrink: 0;
@@ -64,7 +58,7 @@ header .toolbar-nav .cta-button {
 
 header .toolbar-nav .cta-button a {
     background-color: #e76f51; /* Coral */
-    color: #fff; /* White */
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -72,6 +66,15 @@ header .toolbar-nav .cta-button a {
 
 header .toolbar-nav .cta-button a:hover {
     background-color: #f4a261; /* Light Coral */
+}
+
+/* Ensure Mailchimp Pop-up is on top */
+#mcjs {
+    z-index: 9999; /* Ensure the pop-up is on top */
+    position: relative; /* Ensure it is positioned correctly */
+}
+#mcjs {
+    display: block !important; /* Ensure the pop-up is displayed */
 }
 
 /* Hero Section */
