@@ -1,52 +1,58 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /* Light Gray */
+    color: #333; /* Dark Gray */
+}
+
+a {
+    color: #2a9d8f; /* Teal */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Header Styles */
 header.toolbar {
-    background-color: #4CAF50; /* Green */
-    color: white;
+    background-color: #264653; /* Dark Blue */
+    color: #fff; /* White */
     padding: 10px 0;
 }
 
-header .toolbar-content {
+.toolbar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header .toolbar-nav .nav-links a,
-header .toolbar-nav .legal-links a {
-    color: white;
-    text-decoration: none;
+.toolbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a,
+.legal-links a {
+    margin: 0 10px;
+    color: #fff; /* White */
+}
+
+.cta-button a {
+    background-color: #e76f51; /* Coral */
+    color: #fff; /* White */
     padding: 10px 20px;
-}
-
-header .toolbar-nav .nav-links a:hover,
-header .toolbar-nav .legal-links a:hover {
-    background-color: #45a049; /* Darker Green */
-}
-
-header .toolbar-nav .search-icon {
-    color: white;
-    padding: 10px 20px;
-}
-
-header .toolbar-nav .cta-button a {
-    background-color: #ff9800; /* Orange */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
     border-radius: 5px;
 }
 
-header .toolbar-nav .cta-button a:hover {
-    background-color: #e68900; /* Darker Orange */
+.cta-button a:hover {
+    background-color: #f4a261; /* Light Coral */
 }
 
 /* Main Content Styles */
@@ -54,65 +60,29 @@ main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 5px;
+    background-color: #fff; /* White */
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-main h1 {
-    color: #4CAF50; /* Green */
+h1 {
+    color: #2a9d8f; /* Teal */
 }
 
-main p, main ul {
-    line-height: 1.6;
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
-main ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-main ul li {
-    background-color: white;
-    padding: 10px;
+ul li {
     margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-main ul li a {
-    color: #4CAF50; /* Green */
-    text-decoration: none;
-}
-
-main ul li a:hover {
-    text-decoration: underline;
 }
 
 /* Footer Styles */
-footer.footer {
-    background-color: #333; /* Dark Gray */
-    color: white;
-    padding: 20px 0;
+footer {
+    background-color: #264653; /* Dark Blue */
+    color: #fff; /* White */
     text-align: center;
-}
-
-footer.footer a {
-    color: #4CAF50; /* Green */
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer.footer a:hover {
-    text-decoration: underline;
-}
-
-footer.footer .social-links a {
-    display: inline-block;
-    margin: 0 10px;
-    color: white;
-}
-
-footer.footer .social-links a:hover {
-    color: #4CAF50; /* Green */
+    padding: 20px 0;
+    margin-top: 20px;
 }

@@ -1,16 +1,26 @@
 /* General Styles */
 body {
-    background-color: #f4f4f4; /* Light Gray */
-    color: #333; /* Dark Gray */
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4; /* Light Gray */
+    color: #333; /* Dark Gray */
+}
+
+a {
+    color: #2a9d8f; /* Teal */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Header Styles */
 header.toolbar {
-    background-color: #4CAF50; /* Green */
-    color: white;
+    background-color: #264653; /* Dark Blue */
+    color: #fff; /* White */
     padding: 20px;
 }
 
@@ -37,14 +47,14 @@ header .toolbar-nav .legal-links {
 
 header .toolbar-nav .nav-links a,
 header .toolbar-nav .legal-links a {
-    color: white;
+    color: #fff; /* White */
     margin: 0 10px;
     text-decoration: none;
 }
 
 header .toolbar-nav .nav-links a:hover,
 header .toolbar-nav .legal-links a:hover {
-    color: #ff9800; /* Orange */
+    color: #f4a261; /* Light Coral */
 }
 
 header .toolbar-nav .cta-button {
@@ -53,15 +63,15 @@ header .toolbar-nav .cta-button {
 }
 
 header .toolbar-nav .cta-button a {
-    background-color: #ff9800; /* Orange */
-    color: white;
+    background-color: #e76f51; /* Coral */
+    color: #fff; /* White */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 header .toolbar-nav .cta-button a:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #f4a261; /* Light Coral */
 }
 
 /* Hero Section */
@@ -88,7 +98,7 @@ header .toolbar-nav .cta-button a:hover {
 }
 
 .hero .btn-primary {
-    background-color: #ff9800; /* Orange */
+    background-color: #e76f51; /* Coral */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -96,7 +106,7 @@ header .toolbar-nav .cta-button a:hover {
 }
 
 .hero .btn-primary:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #f4a261; /* Light Coral */
 }
 
 /* Main Content Area */
@@ -156,7 +166,7 @@ main#content {
 }
 
 #newsletter .btn-secondary {
-    background-color: #4CAF50; /* Green */
+    background-color: #264653; /* Dark Blue */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -164,12 +174,12 @@ main#content {
 }
 
 #newsletter .btn-secondary:hover {
-    background-color: #ff9800; /* Orange */
+    background-color: #e76f51; /* Coral */
 }
 
 /* Footer */
 footer.footer {
-    background-color: #333; /* Dark Gray */
+    background-color: #264653; /* Dark Blue */
     color: white;
     padding: 20px;
     text-align: center;
@@ -193,7 +203,7 @@ footer .footer-center p a {
 }
 
 footer .footer-center p a:hover {
-    color: #ff9800; /* Orange */
+    color: #f4a261; /* Light Coral */
 }
 
 footer .social-links a {
@@ -203,5 +213,5 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-    color: #ff9800; /* Orange */
+    color: #f4a261; /* Light Coral */
 }
