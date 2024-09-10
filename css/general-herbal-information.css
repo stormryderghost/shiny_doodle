@@ -1,0 +1,112 @@
+ECHO is on.
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header.toolbar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+header .toolbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .toolbar-nav .nav-links a,
+header .toolbar-nav .legal-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+header .toolbar-nav .nav-links a:hover,
+header .toolbar-nav .legal-links a:hover {
+    background-color: #45a049;
+}
+
+header .toolbar-nav .cta-button a {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header .toolbar-nav .cta-button a:hover {
+    background-color: #e68900;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+main h1 {
+    color: #4CAF50;
+}
+
+main article {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main article h2, main article h3 {
+    color: #4CAF50;
+}
+
+main article ul, main article ol {
+    padding-left: 20px;
+}
+
+main article ul li, main article ol li {
+    margin-bottom: 10px;
+}
+
+main article a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+main article a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+}
+
+footer .social-links a:hover {
+    color: #4CAF50;
+}
