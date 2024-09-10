@@ -19,6 +19,20 @@ header .toolbar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+header .toolbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header .toolbar-nav .nav-links,
+header .toolbar-nav .legal-links {
+    display: flex;
+    flex: 1;
 }
 
 header .toolbar-nav .nav-links a,
@@ -31,6 +45,14 @@ header .toolbar-nav .legal-links a {
 header .toolbar-nav .nav-links a:hover,
 header .toolbar-nav .legal-links a:hover {
     color: #FF7043; /* Sunset Orange */
+}
+
+header .toolbar-nav .search-icon {
+    margin-left: auto;
+}
+
+header .toolbar-nav .cta-button {
+    margin-left: 20px;
 }
 
 header .toolbar-nav .cta-button a {
