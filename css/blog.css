@@ -71,15 +71,23 @@ main#content ul li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Remove any potential unwanted image effects */
+/* Ensure images fit within their container */
 main#content ul li img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%; /* Ensure images do not overflow their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+    margin: 0 auto; /* Center image horizontally */
+    border: 0; /* Remove any border styles */
     box-shadow: none; /* Ensure no shadow effects */
     background: transparent; /* Ensure no background color */
 }
 
+/* Ensure no unwanted effects on image containers */
+main#content ul li {
+    overflow: hidden; /* Prevent image overflow */
+}
+
+/* Ensure links have consistent styles */
 main#content ul li a {
     color: #2a9d8f; /* Teal */
     text-decoration: none;
