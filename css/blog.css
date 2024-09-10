@@ -70,126 +70,78 @@ header .toolbar-nav .cta-button a:hover {
     background-color: #f4a261; /* Light Coral */
 }
 
-/* Ensure Mailchimp Pop-up is on top */
-#mcjs {
-    z-index: 9999; /* Ensure the pop-up is on top */
-    position: relative; /* Ensure it is positioned correctly */
-}
-#mcjs {
-    display: block !important; /* Ensure the pop-up is displayed */
-}
-
-/* Hero Section */
-.hero {
-    background-color: #D1C4E9; /* Calm Lavender */
-    color: #4E342E; /* Deep Brown */
-    padding: 50px;
-    text-align: center;
-}
-
-.hero img {
-    max-width: 100%;
-    height: auto;
-    /* Ensure no unwanted styles affect images */
-    box-shadow: none; /* Remove any shadow effects */
-    background: transparent; /* Ensure no background color */
-}
-
-/* Main Content Area */
+/* Main Content Styles */
 main#content {
     padding: 20px;
 }
 
-#featured-posts, #categories, #recent-posts, #newsletter {
-    margin-bottom: 40px;
+main#content h2 {
+    color: #2a9d8f; /* Teal */
 }
 
-#featured-posts h2, #categories h2, #recent-posts h2, #newsletter h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+main#content ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.post-grid, .category-grid, .recent-posts-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.post, .category, .recent-posts-list .post {
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+main#content ul li {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
-    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.post img, .category img, .recent-posts-list .post img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: none; /* Remove any shadow effects */
+/* Ensure images fit within their container */
+main#content ul li img {
+    max-width: 100%; /* Ensure images do not overflow their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+    margin: 0 auto; /* Center image horizontally */
+    border: 0; /* Remove any border styles */
+    box-shadow: none; /* Ensure no shadow effects */
     background: transparent; /* Ensure no background color */
 }
 
-/* Newsletter Section */
-#newsletter form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Ensure no unwanted effects on image containers */
+main#content ul li {
+    overflow: hidden; /* Prevent image overflow */
 }
 
-#newsletter input[type="email"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #4E342E; /* Deep Brown */
-    border-radius: 5px;
-}
-
-#newsletter .btn-secondary {
-    background-color: #264653; /* Dark Blue */
-    color: white;
-    padding: 10px 20px;
+/* Ensure links have consistent styles */
+main#content ul li a {
+    color: #2a9d8f; /* Teal */
     text-decoration: none;
-    border-radius: 5px;
 }
 
-#newsletter .btn-secondary:hover {
-    background-color: #e76f51; /* Coral */
+main#content ul li a:hover {
+    text-decoration: underline;
 }
 
-/* Footer */
+/* Footer Styles */
 footer.footer {
     background-color: #264653; /* Dark Blue */
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
-footer .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer .footer-left, footer .footer-center, footer .footer-right {
-    flex: 1 1 30%;
-    margin: 10px 0;
-}
-
-footer .footer-center p a {
-    color: white;
+footer.footer a {
+    color: #2a9d8f; /* Teal */
     text-decoration: none;
-}
-
-footer .footer-center p a:hover {
-    color: #f4a261; /* Light Coral */
-}
-
-footer .social-links a {
-    color: white;
     margin: 0 10px;
-    text-decoration: none;
 }
 
-footer .social-links a:hover {
-    color: #f4a261; /* Light Coral */
+footer.footer a:hover {
+    text-decoration: underline;
+}
+
+footer.footer .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+}
+
+footer.footer .social-links a:hover {
+    color: #2a9d8f; /* Teal */
 }
