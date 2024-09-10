@@ -71,6 +71,15 @@ main#content ul li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Remove any potential unwanted image effects */
+main#content ul li img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: none; /* Ensure no shadow effects */
+    background: transparent; /* Ensure no background color */
+}
+
 main#content ul li a {
     color: #2a9d8f; /* Teal */
     text-decoration: none;
