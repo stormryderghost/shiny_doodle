@@ -12,7 +12,6 @@ header.toolbar {
     background-color: #4A773C; /* Earthy Green */
     color: #F5F5DC; /* Warm Beige */
     padding: 20px;
-    text-align: center;
 }
 
 header .toolbar-content {
@@ -33,6 +32,7 @@ header .toolbar-nav .nav-links,
 header .toolbar-nav .legal-links {
     display: flex;
     flex: 1;
+    flex-wrap: wrap;
 }
 
 header .toolbar-nav .nav-links a,
@@ -53,6 +53,7 @@ header .toolbar-nav .search-icon {
 
 header .toolbar-nav .cta-button {
     margin-left: 20px;
+    flex-shrink: 0;
 }
 
 header .toolbar-nav .cta-button a {
