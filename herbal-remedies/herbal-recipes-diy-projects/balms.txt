@@ -15,7 +15,8 @@
     <meta name="twitter:description" content="Learn how to create herbal salves and balms for soothing skin conditions with our easy-to-follow recipes.">
     <meta name="twitter:image" content="https://www.shiny-doodle.com/images/herbal-salves-balms.jpg">
     <title>Herbal Salves and Balms: Recipes for Soothing Skin Conditions - Shiny Doodle</title>
-     <link rel="stylesheet" href="/shiny_doodle/css/posts.css">
+    <link rel="stylesheet" href="/shiny_doodle/css/general-herbal-information.css">
+
 </head>
 <body>
     <!-- Header -->
