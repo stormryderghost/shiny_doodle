@@ -18,13 +18,30 @@ header .toolbar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .toolbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header .toolbar-nav .nav-links,
+header .toolbar-nav .legal-links {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header .toolbar-nav .nav-links a,
 header .toolbar-nav .legal-links a {
     color: white;
+    margin: 0 10px;
     text-decoration: none;
-    padding: 10px 20px;
 }
 
 header .toolbar-nav .nav-links a:hover,
@@ -33,8 +50,12 @@ header .toolbar-nav .legal-links a:hover {
 }
 
 header .toolbar-nav .search-icon {
-    color: white;
+    margin-left: auto;
     padding: 10px 20px;
+}
+
+header .toolbar-nav .cta-button {
+    margin-left: 20px;
 }
 
 header .toolbar-nav .cta-button a {
