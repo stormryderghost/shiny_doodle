@@ -88,28 +88,9 @@ header .toolbar-nav .cta-button a:hover {
 .hero img {
     max-width: 100%;
     height: auto;
-}
-
-.hero .hero-text h1 {
-    font-size: 2.5em;
-    margin: 20px 0;
-}
-
-.hero .hero-text p.typewriter {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.hero .btn-primary {
-    background-color: #e76f51; /* Coral */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.hero .btn-primary:hover {
-    background-color: #f4a261; /* Light Coral */
+    /* Ensure no unwanted styles affect images */
+    box-shadow: none; /* Remove any shadow effects */
+    background: transparent; /* Ensure no background color */
 }
 
 /* Main Content Area */
@@ -142,16 +123,8 @@ main#content {
 .post img, .category img, .recent-posts-list .post img {
     max-width: 100%;
     height: auto;
-}
-
-.category h3, .recent-posts-list .post h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
-    padding: 0 10px;
-}
-
-.recent-posts-list .post p {
-    padding: 0 10px 10px;
+    box-shadow: none; /* Remove any shadow effects */
+    background: transparent; /* Ensure no background color */
 }
 
 /* Newsletter Section */
