@@ -1,21 +1,43 @@
 import os
 
-# Path to your HTML files
-base_dir = "herbal-remedies"  # Adjust this to match your root directory where HTML files are located
+# Define the base directory relative to the script location
+base_dir = os.path.dirname(__file__)
 
-def update_paths(directory):
-    for subdir, _, files in os.walk(directory):
-        for file in files:
-            if file.endswith(".html"):
-                file_path = os.path.join(subdir, file)
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                
-                # Update paths based on your structure
-                # Example: Remove /shiny_doodle from all paths
-                new_content = content.replace('/shiny_doodle/', '/')
+# Define paths relative to the base directory
+directories = [
+    'css',
+    'images',
+    'js',
+    'herbal-remedies',
+    'herbal-remedies/community-resources',
+    'herbal-remedies/general-herbal-information',
+    'herbal-remedies/herbal-recipes-diy-projects',
+    'herbal-remedies/herbal-remedies-for-specific-conditions',
+    'herbal-remedies/herbal-wisdom-folklore',
+]
 
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
+html_files = [
+    'about.html',
+    'archives.html',
+    'categories.html',
+    'contact.html',
+    'exclusive-herbal-remedies-guide.html',
+    'index.html',
+    'privacy-policy.html',
+    'subscribe.html',
+]
 
-update_paths(base_dir)
+# Function to generate paths
+def generate_paths():
+    # Collect all directory paths
+    for directory in directories:
+        path = os.path.join(base_dir, directory)
+        print(f"Directory: {path}")
+    
+    # Collect all HTML file paths
+    for html_file in html_files:
+        path = os.path.join(base_dir, html_file)
+        print(f"HTML File: {path}")
+
+# Print paths
+generate_paths()
