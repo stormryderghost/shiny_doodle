@@ -3,24 +3,35 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # The branch you push to, which triggers the deployment
+      - main  # Adjust this if your main branch is named differently
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.6.0
         with:
-          ssh-private-key: ${{ secrets.DEPLOY_KEY_GITHUB }}
+          submodules: true  # Fetch submodules if any
+          fetch-depth: 0    # Fetch full history for all branches and tags
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Adjust this to the Node.js version you're using
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./shiny_doodle  # Adjust if needed
+
+      - name: Build
+        run: npm run build  # Adjust to your build command
+        working-directory: ./shiny_doodle  # Adjust if needed
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages  # The branch where your site will be deployed
-          publish_dir: ./  # The directory to publish, adjust if needed
+          publish_dir: ./shiny_doodle  # Path to your built files
+          publish_branch: gh-pages  # Branch to deploy to within the same repository
