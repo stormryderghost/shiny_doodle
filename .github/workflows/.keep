@@ -1,1 +1,23 @@
 
+name: Link Checker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Run Linkinator
+      uses: dswiss/linkinator-action@v1
+      with:
+        url: 'https://stormryderghost.github.io/shiny_doodle'
