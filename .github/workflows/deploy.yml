@@ -3,36 +3,32 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # The branch you want to deploy from
+      - main  # Adjust this if your default branch is different
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          submodules: true
-          fetch-depth: 0
-
+        
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'  # Adjust to your Node.js version
+          node-version: '16'  # Specify the Node.js version you need
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./shiny_doodle  # This assumes your working directory is 'shiny_doodle'
+        working-directory: ./  # Adjust this if your package.json is in a subdirectory
 
-      - name: Build
-        run: npm run build  # Adjust if you have a specific build command
-        working-directory: ./shiny_doodle  # Ensure this path is correct
+      - name: Build project
+        run: npm run build
+        working-directory: ./  # Adjust this if your build script is in a subdirectory
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./shiny_doodle  # Path to the directory to publish
-          publish_branch: gh-pages  # Branch to deploy to
-          publish_root: true  # Deploy to the root of the 'gh-pages' branch
+          deploy_key: ${{ secrets.DEPLOY_KEY_GITHUB }}
+          publish_branch: gh-pages
+          publish_dir: ./  # Adjust this if your build output is in a subdirectory
