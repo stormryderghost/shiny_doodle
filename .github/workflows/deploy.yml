@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust if your default branch is different
+      - main  # Trigger deployment on pushes to the main branch
 
 jobs:
   deploy:
@@ -13,22 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'  # Specify the Node.js version you need
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: shiny_doodle/frontend  # Adjust if your directory structure is different
-
-      - name: Build project
-        run: npm run build
-        working-directory: shiny_doodle/frontend  # Adjust if your directory structure is different
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY_GITHUB }}
-          publish_branch: gh-pages
-          publish_dir: shiny_doodle/frontend/build  # Adjust if your build output is in a different directory
+          publish_dir: ./  # Assuming your content is in the root directory
+          user_name: "GitHub Actions"
+          user_email: "actions@github.com"
