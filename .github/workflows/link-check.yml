@@ -19,8 +19,5 @@ jobs:
     - name: Run Linkinator
       uses: JustinBeckwith/linkinator-action@v1.10.4
       with:
-        paths: '**/*.html' # Glob pattern for HTML files if you want to check local files
         serverRoot: 'https://stormryderghost.github.io/shiny_doodle' # Your GitHub Pages URL
-        concurrency: 5
-        retry: 3
-        timeout: 30
+        paths: '**/*.html' # Glob pattern to match HTML files
