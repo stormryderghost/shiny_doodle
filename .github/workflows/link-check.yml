@@ -1,12 +1,12 @@
-name: Link Checker
+name: Link Check
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger on pushes to the main branch
   pull_request:
     branches:
-      - main
+      - main  # Trigger on pull requests to the main branch
 
 jobs:
   link-check:
@@ -19,5 +19,6 @@ jobs:
     - name: Run Linkinator
       uses: JustinBeckwith/linkinator-action@v1.10.4
       with:
-        serverRoot: 'https://stormryderghost.github.io/shiny_doodle' # Your GitHub Pages URL
-        paths: '**/*.html' # Glob pattern to match HTML files
+        # Ensure the path matches the location of your HTML files
+        paths: '**/*.html'
+        # Additional configuration options can be added here if needed
