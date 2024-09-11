@@ -3,11 +3,10 @@ name: Update File Paths
 on:
   push:
     branches:
-      - main  # Change this to your default branch if different
-  workflow_dispatch:  # Allows manual trigger from the GitHub Actions tab
+      - main
 
 jobs:
-  update_paths:
+  update-paths:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,12 +16,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'  # Specify the Python version you need
+        python-version: '3.x' # Specify the Python version you need
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r .github/scripts/requirements.txt  # If you have additional dependencies
+        pip install -r requirements.txt # If you have a requirements file
 
     - name: Run update script
-      run: python .github/scripts/update_paths.py
+      run: |
+        python update_paths.py # Name of your Python script
