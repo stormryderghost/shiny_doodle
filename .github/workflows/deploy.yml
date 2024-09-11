@@ -3,16 +3,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust this if your default branch is different
+      - main  # Adjust if your default branch is different
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -20,15 +20,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./  # Adjust this if your package.json is in a subdirectory
+        working-directory: shiny_doodle/frontend  # Adjust if your directory structure is different
 
       - name: Build project
         run: npm run build
-        working-directory: ./  # Adjust this if your build script is in a subdirectory
+        working-directory: shiny_doodle/frontend  # Adjust if your directory structure is different
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY_GITHUB }}
           publish_branch: gh-pages
-          publish_dir: ./  # Adjust this if your build output is in a subdirectory
+          publish_dir: shiny_doodle/frontend/build  # Adjust if your build output is in a different directory
