@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Run update links script
-      run: node update-links.js
+      run: node js/update-links.js
 
     - name: Commit updated links
       run: |
