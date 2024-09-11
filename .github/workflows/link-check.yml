@@ -19,5 +19,8 @@ jobs:
     - name: Run Linkinator
       uses: JustinBeckwith/linkinator-action@v1.10.4
       with:
-        url: 'https://stormryderghost.github.io/shiny_doodle' # Your GitHub Pages URL
-        fail_on_error: true
+        paths: '**/*.html' # Glob pattern for HTML files if you want to check local files
+        serverRoot: 'https://stormryderghost.github.io/shiny_doodle' # Your GitHub Pages URL
+        concurrency: 5
+        retry: 3
+        timeout: 30
