@@ -1,4 +1,4 @@
-name: Update File Paths
+name: Update File Paths and Deploy
 
 on:
   push:
@@ -13,15 +13,27 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        python-version: '3.x' # Specify the Python version you need
+        node-version: '18' # Specify the Node.js version you need
 
     - name: Install dependencies
-      run: |
-        pip install -r requirements.txt # If you have a requirements file
+      run: npm install # Install dependencies if you have a package.json file
 
     - name: Run update script
-      run: |
-        python update_paths.py # Name of your Python script
+      run: node js/update-paths.js # Run your Node.js script
+
+  deploy:
+    needs: update-paths
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.DEPLOY_KEY_GITHUB }}
+        publish_dir: ./ # Adjust this if your build output is in a different directory
