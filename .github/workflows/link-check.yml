@@ -19,6 +19,23 @@ jobs:
     - name: Run Linkinator
       uses: JustinBeckwith/linkinator-action@v1.10.4
       with:
-        # Ensure the path matches the location of your HTML files
-        paths: '**/*.html'
-        # Additional configuration options can be added here if needed
+        # List all the paths you want to include for link checking
+        paths: |
+          index.html
+          about.html
+          archives.html
+          categories.html
+          contact.html
+          exclusive-herbal-remedies-guide.html
+          privacy-policy.html
+          subscribe.html
+          terms-of-service.html
+          categories/categories.html
+          herbal-remedies/blog.html
+          herbal-remedies/community-resources/index.html
+          herbal-remedies/general-herbal-information/*.html
+          herbal-remedies/herbal-recipes-diy-projects/*.html
+          herbal-remedies/herbal-remedies-for-specific-conditions/*.html
+          herbal-remedies/herbal-wisdom-folklore/*.html
+        recurse: true  # To check subdirectories as well
+        fail_on_error: true  # Fail the workflow if broken links are found
