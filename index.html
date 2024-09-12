@@ -32,7 +32,7 @@
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/71b03d99ae47a4534ee09d4ee/b6c43a0b0ecac298734795e73.js");</script>
     
 <link rel="stylesheet" href="/shiny_doodle/css/homepage.css">
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="62c208e7-671b-4d0e-9a0a-7c4348ad6dbb" data-blockingmode="auto" type="text/javascript"></script>
+
 
 </head>
 <body>
@@ -172,6 +172,36 @@
             </div>
         </div>
     </footer>
+
+ <!-- Cookie Consent Pop-Up -->
+    <div id="cookie-consent" class="cookie-consent">
+        <div class="cookie-consent-content">
+            <p>We use cookies to ensure you get the best experience on our website. By continuing to browse, you agree to our <a href="/shiny_doodle/cookie-consent.html">Cookie Policy</a>.</p>
+            <button id="cookie-consent-button" class="cookie-consent-button">Got it!</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Cookie Consent -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cookieConsent = document.getElementById('cookie-consent');
+            var consentButton = document.getElementById('cookie-consent-button');
+            
+            // Check if cookie consent has already been given
+            if (!localStorage.getItem('cookieConsent')) {
+                // Show the cookie consent pop-up
+                cookieConsent.style.display = 'block';
+            }
+
+            // Handle the consent button click
+            consentButton.addEventListener('click', function() {
+                // Set a flag in localStorage to remember that consent has been given
+                localStorage.setItem('cookieConsent', 'true');
+                // Hide the pop-up
+                cookieConsent.style.display = 'none';
+            });
+        });
+    </script>
 
 </body>
 </html>
