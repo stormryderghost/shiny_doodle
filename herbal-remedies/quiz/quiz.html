@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Remedies Quiz</title>
+</head>
+<body>
+    <h1>Herbal Remedies Quiz</h1>
+    <form id="herbal-quiz" onsubmit="return showResults()">
+        <!-- 1. Health Concern Section -->
+        <section>
+            <h2>1. What is your primary health concern?</h2>
+            <label><input type="radio" name="health_concern" value="digestive" required> Digestive Issues</label><br>
+            <label><input type="radio" name="health_concern" value="anxiety"> Anxiety and Stress</label><br>
+            <label><input type="radio" name="health_concern" value="sleep"> Sleep Problems</label><br>
+            <label><input type="radio" name="health_concern" value="immune"> Immune Support</label><br>
+            <label><input type="radio" name="health_concern" value="skin"> Skin Health</label><br>
+            <label><input type="radio" name="health_concern" value="pain"> Pain and Inflammation</label><br>
+            <label><input type="radio" name="health_concern" value="energy"> Energy and Fatigue</label><br>
+            <label><input type="radio" name="health_concern" value="respiratory"> Respiratory Issues</label><br>
+            <label><input type="radio" name="health_concern" value="women"> Women's Health</label>
+        </section>
+
+        <!-- Submit Button Section -->
+        <section>
+            <button type="submit">Get My Herbal Recommendations</button>
+        </section>
+    </form>
+
+    <script>
+    function showResults() {
+        // Get the selected health concern value
+        var healthConcern = document.querySelector('input[name="health_concern"]:checked').value;
+
+        // Redirect to the appropriate results page based on the health concern
+        switch (healthConcern) {
+            case 'digestive':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-digestive.html';
+                break;
+            case 'anxiety':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-anxiety.html';
+                break;
+            case 'sleep':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-sleep.html';
+                break;
+            case 'immune':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-immune.html';
+                break;
+            case 'skin':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-skin.html';
+                break;
+            case 'pain':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-pain.html';
+                break;
+            case 'energy':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-energy.html';
+                break;
+            case 'respiratory':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-respiratory.html';
+                break;
+            case 'women':
+                window.location.href = '/herbal-remedies/quiz/quiz-results-women.html';
+                break;
+            default:
+                return false;
+        }
+
+        // Prevent form submission from reloading the page
+        return false;
+    }
+    </script>
+</body>
+</html>
