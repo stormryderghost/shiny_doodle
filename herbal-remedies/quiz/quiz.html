@@ -1,40 +1,107 @@
-<script>
-function showResults() {
-    var healthConcern = document.querySelector('input[name="health_concern"]:checked').value;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Remedies Quiz</title>
+</head>
+<body>
+    <h1>Herbal Remedies Quiz</h1>
+    <form id="herbal-quiz" onsubmit="return showResults()">
+        <!-- 1. Health Concern Section -->
+        <section>
+            <h2>1. What is your primary health concern?</h2>
+            <label><input type="radio" name="health_concern" value="digestive" required> Digestive Issues</label><br>
+            <label><input type="radio" name="health_concern" value="anxiety"> Anxiety and Stress</label><br>
+            <label><input type="radio" name="health_concern" value="sleep"> Sleep Problems</label><br>
+            <label><input type="radio" name="health_concern" value="immune"> Immune Support</label><br>
+            <label><input type="radio" name="health_concern" value="skin"> Skin Health</label><br>
+            <label><input type="radio" name="health_concern" value="pain"> Pain and Inflammation</label><br>
+            <label><input type="radio" name="health_concern" value="energy"> Energy and Fatigue</label><br>
+            <label><input type="radio" name="health_concern" value="respiratory"> Respiratory Issues</label><br>
+            <label><input type="radio" name="health_concern" value="women"> Women's Health</label>
+        </section>
 
-    // Corrected paths for result pages
-    switch (healthConcern) {
-        case 'digestive':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-digestive.html';
-            break;
-        case 'anxiety':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-anxiety.html';
-            break;
-        case 'sleep':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-sleep.html';
-            break;
-        case 'immune':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-immune-support.html';  <!-- Corrected -->
-            break;
-        case 'skin':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-skin-health.html';  <!-- Corrected -->
-            break;
-        case 'pain':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-pain-inflammation.html';  <!-- Corrected -->
-            break;
-        case 'energy':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-energy-fatigue.html';  <!-- Corrected -->
-            break;
-        case 'respiratory':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-respiratory-issues.html';  <!-- Corrected -->
-            break;
-        case 'women':
-            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-womens-health.html';  <!-- Corrected -->
-            break;
-        default:
-            return false;
+        <!-- Additional Questions based on health concern (example for digestive issues) -->
+        <section id="digestive-questions" style="display:none;">
+            <h2>2. What specific digestive issues are you experiencing?</h2>
+            <label><input type="radio" name="digestive_issue" value="bloating"> Bloating</label><br>
+            <label><input type="radio" name="digestive_issue" value="indigestion"> Indigestion</label><br>
+            <label><input type="radio" name="digestive_issue" value="constipation"> Constipation</label><br>
+            <label><input type="radio" name="digestive_issue" value="diarrhea"> Diarrhea</label><br>
+        </section>
+
+        <!-- Submit Button Section -->
+        <section>
+            <button type="submit">Get My Herbal Recommendations</button>
+        </section>
+    </form>
+
+    <script>
+    document.querySelector('input[name="health_concern"]').addEventListener('change', function(e) {
+        // Hide all additional questions sections
+        document.querySelectorAll('[id$="-questions"]').forEach(function(section) {
+            section.style.display = 'none';
+        });
+
+        // Show relevant additional questions section based on selected health concern
+        var selectedConcern = e.target.value;
+        var additionalQuestions = document.getElementById(selectedConcern + '-questions');
+        if (additionalQuestions) {
+            additionalQuestions.style.display = 'block';
+        }
+    });
+
+    function showResults() {
+        var healthConcern = document.querySelector('input[name="health_concern"]:checked').value;
+        var specificIssue = '';
+
+        if (healthConcern === 'digestive') {
+            specificIssue = document.querySelector('input[name="digestive_issue"]:checked') ? document.querySelector('input[name="digestive_issue"]:checked').value : '';
+        }
+
+        var resultPage = '';
+
+        switch (healthConcern) {
+            case 'digestive':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-digestive.html';
+                break;
+            case 'anxiety':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-anxiety.html';
+                break;
+            case 'sleep':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-sleep.html';
+                break;
+            case 'immune':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-immune.html';
+                break;
+            case 'skin':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-skin.html';
+                break;
+            case 'pain':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-pain.html';
+                break;
+            case 'energy':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-energy.html';
+                break;
+            case 'respiratory':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-respiratory.html';
+                break;
+            case 'women':
+                resultPage = '/shiny_doodle/herbal-remedies/quiz/quiz-results-womens-health.html';
+                break;
+            default:
+                return false;
+        }
+
+        if (specificIssue) {
+            resultPage = resultPage.replace('.html', '-' + specificIssue + '.html');
+        }
+
+        window.location.href = resultPage;
+
+        return false;
     }
-
-    return false;
-}
-</script>
+    </script>
+</body>
+</html>
