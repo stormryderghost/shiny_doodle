@@ -144,4 +144,47 @@ footer.footer .social-links a {
 
 footer.footer .social-links a:hover {
     color: #2a9d8f; /* Teal */
+}/* Cookie Consent Pop-Up Styles */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: none; /* Hidden by default */
+    z-index: 1000;
 }
+
+.cookie-consent p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.cookie-consent a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.cookie-consent a:hover {
+    text-decoration: underline;
+}
+
+.cookie-consent button {
+    background-color: #f1c40f;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.cookie-consent button:hover {
+    background-color: #e1b12c;
+}
+
