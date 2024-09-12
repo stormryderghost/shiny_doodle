@@ -1,0 +1,60 @@
+<form id="herbal-quiz" onsubmit="return showResults()">
+    <!-- 1. Health Concern Section -->
+    <section>
+        <h2>1. What is your primary health concern?</h2>
+        <label><input type="radio" name="health_concern" value="digestive" required> Digestive Issues</label><br>
+        <label><input type="radio" name="health_concern" value="anxiety"> Anxiety and Stress</label><br>
+        <label><input type="radio" name="health_concern" value="sleep"> Sleep Problems</label><br>
+        <label><input type="radio" name="health_concern" value="immune"> Immune Support</label><br>
+        <label><input type="radio" name="health_concern" value="skin"> Skin Health</label><br>
+        <label><input type="radio" name="health_concern" value="pain"> Pain and Inflammation</label><br>
+        <label><input type="radio" name="health_concern" value="energy"> Energy and Fatigue</label><br>
+        <label><input type="radio" name="health_concern" value="respiratory"> Respiratory Issues</label><br>
+        <label><input type="radio" name="health_concern" value="women"> Women's Health</label>
+    </section>
+
+    <!-- Other sections unchanged -->
+
+    <section>
+        <button type="submit">Get My Herbal Recommendations</button>
+    </section>
+</form>
+
+<script>
+function showResults() {
+    var healthConcern = document.querySelector('input[name="health_concern"]:checked').value;
+
+    switch(healthConcern) {
+        case 'digestive':
+            window.location.href = '/quiz-results-digestive.html';
+            break;
+        case 'anxiety':
+            window.location.href = '/quiz-results-anxiety.html';
+            break;
+        case 'sleep':
+            window.location.href = '/quiz-results-sleep.html';
+            break;
+        case 'immune':
+            window.location.href = '/quiz-results-immune.html';
+            break;
+        case 'skin':
+            window.location.href = '/quiz-results-skin.html';
+            break;
+        case 'pain':
+            window.location.href = '/quiz-results-pain.html';
+            break;
+        case 'energy':
+            window.location.href = '/quiz-results-energy.html';
+            break;
+        case 'respiratory':
+            window.location.href = '/quiz-results-respiratory.html';
+            break;
+        case 'women':
+            window.location.href = '/quiz-results-women.html';
+            break;
+        default:
+            return false;
+    }
+    return false;
+}
+</script>
