@@ -1,105 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herbal Remedies Quiz</title>
-    <style>
-        .follow-up { display: none; }
-    </style>
-</head>
-<body>
-    <h1>Herbal Remedies Quiz</h1>
-    <form id="herbal-quiz" onsubmit="return showResults()">
-        <!-- 1. Health Concern Section -->
-        <section id="section1">
-            <h2>1. What is your primary health concern?</h2>
-            <label><input type="radio" name="health_concern" value="digestive" required onclick="showFollowUp('digestive')"> Digestive Issues</label><br>
-            <label><input type="radio" name="health_concern" value="anxiety" onclick="showFollowUp('anxiety')"> Anxiety and Stress</label><br>
-            <label><input type="radio" name="health_concern" value="sleep" onclick="showFollowUp('sleep')"> Sleep Problems</label><br>
-            <label><input type="radio" name="health_concern" value="immune" onclick="showFollowUp('immune')"> Immune Support</label><br>
-            <label><input type="radio" name="health_concern" value="skin" onclick="showFollowUp('skin')"> Skin Health</label><br>
-            <label><input type="radio" name="health_concern" value="pain" onclick="showFollowUp('pain')"> Pain and Inflammation</label><br>
-            <label><input type="radio" name="health_concern" value="energy" onclick="showFollowUp('energy')"> Energy and Fatigue</label><br>
-            <label><input type="radio" name="health_concern" value="respiratory" onclick="showFollowUp('respiratory')"> Respiratory Issues</label><br>
-            <label><input type="radio" name="health_concern" value="women" onclick="showFollowUp('women')"> Women's Health</label>
-        </section>
+<script>
+function showResults() {
+    var healthConcern = document.querySelector('input[name="health_concern"]:checked').value;
 
-        <!-- Follow-up questions for digestive issues -->
-        <section id="digestive" class="follow-up">
-            <h2>2. Are you experiencing any of the following digestive issues?</h2>
-            <label><input type="radio" name="digestive_issue" value="bloating"> Bloating</label><br>
-            <label><input type="radio" name="digestive_issue" value="nausea"> Nausea</label><br>
-            <label><input type="radio" name="digestive_issue" value="indigestion"> Indigestion</label><br>
-        </section>
+    // Corrected paths for result pages
+    switch (healthConcern) {
+        case 'digestive':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-digestive.html';
+            break;
+        case 'anxiety':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-anxiety.html';
+            break;
+        case 'sleep':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-sleep.html';
+            break;
+        case 'immune':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-immune-support.html';  <!-- Corrected -->
+            break;
+        case 'skin':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-skin-health.html';  <!-- Corrected -->
+            break;
+        case 'pain':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-pain-inflammation.html';  <!-- Corrected -->
+            break;
+        case 'energy':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-energy-fatigue.html';  <!-- Corrected -->
+            break;
+        case 'respiratory':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-respiratory-issues.html';  <!-- Corrected -->
+            break;
+        case 'women':
+            window.location.href = '/shiny_doodle/herbal-remedies/quiz/quiz-results-womens-health.html';  <!-- Corrected -->
+            break;
+        default:
+            return false;
+    }
 
-        <!-- Follow-up questions for anxiety -->
-        <section id="anxiety" class="follow-up">
-            <h2>2. Are you experiencing any of the following symptoms related to anxiety and stress?</h2>
-            <label><input type="radio" name="anxiety_symptom" value="restlessness"> Restlessness</label><br>
-            <label><input type="radio" name="anxiety_symptom" value="nervousness"> Nervousness</label><br>
-            <label><input type="radio" name="anxiety_symptom" value="panic"> Panic</label><br>
-        </section>
-
-        <!-- Additional follow-up sections for other health concerns -->
-
-        <!-- Submit Button Section -->
-        <section>
-            <button type="submit">Get My Herbal Recommendations</button>
-        </section>
-    </form>
-
-    <script>
-        // Function to show follow-up questions based on the selected health concern
-        function showFollowUp(healthConcern) {
-            // Hide all follow-up sections first
-            var followUps = document.querySelectorAll('.follow-up');
-            followUps.forEach(function(section) {
-                section.style.display = 'none';
-            });
-
-            // Show the specific follow-up section for the selected concern
-            document.getElementById(healthConcern).style.display = 'block';
-        }
-
-        // Function to process the form and redirect to the appropriate results page
-        function showResults() {
-            var healthConcern = document.querySelector('input[name="health_concern"]:checked').value;
-            var resultPage = '';
-
-            // Handle results for digestive issues
-            if (healthConcern === 'digestive') {
-                var digestiveIssue = document.querySelector('input[name="digestive_issue"]:checked').value;
-                if (digestiveIssue === 'bloating') {
-                    resultPage = 'quiz-results-digestive-bloating.html';
-                } else if (digestiveIssue === 'nausea') {
-                    resultPage = 'quiz-results-digestive-nausea.html';
-                } else if (digestiveIssue === 'indigestion') {
-                    resultPage = 'quiz-results-digestive-indigestion.html';
-                }
-            }
-
-            // Handle results for anxiety
-            if (healthConcern === 'anxiety') {
-                var anxietySymptom = document.querySelector('input[name="anxiety_symptom"]:checked').value;
-                if (anxietySymptom === 'restlessness') {
-                    resultPage = 'quiz-results-anxiety-restlessness.html';
-                } else if (anxietySymptom === 'nervousness') {
-                    resultPage = 'quiz-results-anxiety-nervousness.html';
-                } else if (anxietySymptom === 'panic') {
-                    resultPage = 'quiz-results-anxiety-panic.html';
-                }
-            }
-
-            // Add more conditions for other health concerns...
-
-            // Redirect to the appropriate result page
-            if (resultPage) {
-                window.location.href = '/shiny_doodle/herbal-remedies/quiz/' + resultPage;
-            }
-
-            return false; // Prevent form submission from reloading the page
-        }
-    </script>
-</body>
-</html>
+    return false;
+}
+</script>
