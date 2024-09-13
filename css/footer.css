@@ -1,101 +1,233 @@
-/* Footer Styles */
-.footer {
-    background-color: #264653;
-    color: #fff;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center; /* Ensure text is centered in the footer */
+/* General styles for the footer */
+.site-footer {
+  background-color: #264653; /* Dark Blue */
+  padding: 45px 0 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff; /* White text */
+  font-family: 'Arial', sans-serif;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.site-footer hr {
+  border-top: 1px solid #bbb;
+  opacity: 0.5;
 }
 
-.footer-left, .footer-right {
-    flex: 1;
+.site-footer hr.small {
+  margin: 20px 0;
 }
 
-.footer-center {
-    flex: 2;
-    text-align: center; /* Center text within the center section */
-    color: #fff; /* Ensure text is white */
+.site-footer h6 {
+  color: #fff; /* White text for headers */
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
-.footer-center p {
-    margin: 0;
+.site-footer a {
+  color: #dcdcdc; /* Light Gray */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footer-center a {
-    color: #fff; /* Ensure links are white */
-    text-decoration: none; /* Optional: remove underline */
+.site-footer a:hover {
+  color: #2a9d8f; /* Teal */
+  text-decoration: underline;
 }
 
-.footer-center a:hover {
-    color: #e76f51; /* Change color on hover */
+.footer-links {
+  padding-left: 0;
+  list-style: none;
 }
 
-.social-links {
-    margin-top: 10px;
+.footer-links li {
+  margin-bottom: 10px;
 }
 
-.social-links a {
-    margin: 0 10px;
-    display: inline-block;
-    color: #fff;
-    font-size: 18px; /* Adjust size as needed */
-    text-decoration: none;
+.footer-links a {
+  color: #dcdcdc; /* Light Gray */
 }
 
-.social-links a:hover {
-    color: #e76f51; /* Change color on hover */
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #2a9d8f; /* Teal */
+  text-decoration: underline;
 }
 
-/* Cookie Consent Styles */
-.cookie-consent {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 15px;
+.footer-links.inline li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.site-footer .social-icons {
+  text-align: center; /* Center align the social icons */
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.social-icons li {
+  display: inline-block; /* Display icons in a horizontal line */
+  margin: 0 10px; /* Space between icons */
+}
+
+.social-icons li.title {
+  display: none; /* Hide title as it's not needed */
+}
+
+.social-icons a {
+  background-color: #eceeef; /* Light Gray */
+  color: #333; /* Dark Gray */
+  font-size: 20px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff; /* White */
+  background-color: #2a9d8f; /* Teal */
+}
+
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 18px;
+}
+
+.social-icons a.facebook:hover {
+  background-color: #3b5998; /* Facebook Blue */
+}
+
+.social-icons a.twitter:hover {
+  background-color: #00aced; /* Twitter Blue */
+}
+
+.social-icons a.linkedin:hover {
+  background-color: #007bb6; /* LinkedIn Blue */
+}
+
+.social-icons a.dribbble:hover {
+  background-color: #ea4c89; /* Dribbble Pink */
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
     text-align: center;
-    border-top: 1px solid #ddd;
-    z-index: 1000;
-    font-family: Arial, sans-serif;
+  }
+}
+
+/* Styles for Mailchimp Subscription Form */
+#mc_embed_signup {
+  margin-top: 20px;
+}
+
+#mc_embed_signup h6 {
+  color: #fff; /* White text for form header */
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#mc_embed_signup .mc-field-group {
+  margin-bottom: 15px;
+}
+
+#mc_embed_signup label {
+  color: #fff; /* White text for form labels */
+  font-size: 14px;
+}
+
+#mc_embed_signup input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#mc_embed_signup .button {
+  background-color: #e76f51; /* Coral */
+  color: #fff; /* White text */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+#mc_embed_signup .button:hover {
+  background-color: #f4a261; /* Light Coral */
+}
+
+
+/* Styles for Cookie Consent Popup */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #264653; /* Dark Blue */
+  color: #fff; /* White text */
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  display: none; /* Hidden by default */
+  z-index: 1000;
+}
+
+.cookie-consent-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .cookie-consent p {
-    margin: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.cookie-consent a {
-    color: #2a9d8f;
-    text-decoration: none;
+.cookie-consent .button {
+  background-color: #e76f51; /* Coral */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
 }
 
-.cookie-consent a:hover {
-    text-decoration: underline;
+.cookie-consent .button:hover {
+  background-color: #f4a261; /* Light Coral */
 }
 
-.cookie-consent button {
-    background-color: #2a9d8f;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 16px;
-}
+@media (max-width: 767px) {
+  .cookie-consent {
+    font-size: 12px;
+    padding: 10px;
+  }
 
-.cookie-consent button:hover {
-    background-color: #1e7a6b;
+  .cookie-consent .button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
 }
