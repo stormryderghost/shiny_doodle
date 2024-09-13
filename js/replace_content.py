@@ -66,7 +66,7 @@ new_content = """
     </script>
 
     <!-- Stylesheet (for non-homepage) -->
-    <link rel="stylesheet" href="/css/blog.css" id="blogStylesheet">
+    <link rel="stylesheet" href="/shiny_doodle/css/blog.css" id="blogStylesheet">
     
     <!-- Page Title -->
     <title>Shiny Doodle | DIY Herbal Remedies</title>

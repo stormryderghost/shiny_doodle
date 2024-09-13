@@ -55,7 +55,7 @@
     </script>
 
     <!-- Stylesheet (for non-homepage) -->
-    <link rel="stylesheet" href="/css/blog.css" id="blogStylesheet">
+    <link rel="stylesheet" href="/shiny_doodle/css/blog.css" id="blogStylesheet">
     
     <!-- Page Title -->
     <title>Shiny Doodle | Discover Your Dosha Type</title>
@@ -89,66 +89,182 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <h1>Discover Your Dosha Type</h1>
-        <form id="quiz-form">
-            <div class="question">
-                <label for="energy">How would you describe your energy levels?</label>
-                <input type="range" name="energy" id="energy" min="0" max="2" step="1" value="1">
-                <div id="energy-label">Moderate</div>
-            </div>
-            <div class="question">
-                <label>How do you usually respond to stress?</label>
-                <input type="radio" name="stress" value="irritable" id="stress-irritable">
-                <label for="stress-irritable">Irritable</label>
-                <input type="radio" name="stress" value="calm" id="stress-calm">
-                <label for="stress-calm">Calm</label>
-                <input type="radio" name="stress" value="overwhelmed" id="stress-overwhelmed">
-                <label for="stress-overwhelmed">Overwhelmed</label>
-            </div>
-            <div class="question">
-                <label for="age">Select your age group:</label>
-                <select name="age" id="age">
-                    <option value="under-20">Under 20</option>
-                    <option value="20-40">20-40</option>
-                    <option value="40-60">40-60</option>
-                    <option value="over-60">Over 60</option>
-                </select>
-            </div>
-            <div class="question">
-                <label for="diet">How would you describe your typical diet?</label>
-                <input type="radio" name="diet" value="heavy" id="diet-heavy">
-                <label for="diet-heavy">Heavy and Rich</label>
-                <input type="radio" name="diet" value="balanced" id="diet-balanced">
-                <label for="diet-balanced">Balanced</label>
-                <input type="radio" name="diet" value="light" id="diet-light">
-                <label for="diet-light">Light</label>
-            </div>
-            <div class="question">
-                <label for="sleep">How is your sleep quality?</label>
-                <input type="radio" name="sleep" value="poor" id="sleep-poor">
-                <label for="sleep-poor">Poor</label>
-                <input type="radio" name="sleep" value="average" id="sleep-average">
-                <label for="sleep-average">Average</label>
-                <input type="radio" name="sleep" value="excellent" id="sleep-excellent">
-                <label for="sleep-excellent">Excellent</label>
-            </div>
-            <div class="question">
-                <label for="email">Enter your email (optional):</label>
-                <input type="email" name="email" id="email" placeholder="your-email@example.com">
-            </div>
-            <div class="question">
-                <input type="checkbox" name="subscribe" id="subscribe">
-                <label for="subscribe">Subscribe to our newsletter for exclusive tips and updates.</label>
-            </div>
-            <button type="button" onclick="submitQuiz()">Submit</button>
-        </form>
-
-        <div id="result" style="display:none;">
-            <!-- Dynamic result content will be injected here -->
+   <!-- Main Content -->
+<main>
+    <h1>Find Your Wellness Profile</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <label for="energy">How would you describe your energy levels?</label>
+            <input type="range" name="energy" id="energy" min="0" max="2" step="1" value="1" oninput="updateEnergyLabel(this.value)">
+            <div id="energy-label">Moderate</div>
         </div>
-    </main>
+        
+        <div class="question">
+            <label>How do you usually respond to stress?</label>
+            <input type="radio" name="stress" value="irritable" id="stress-irritable">
+            <label for="stress-irritable">Irritable</label>
+            <input type="radio" name="stress" value="calm" id="stress-calm">
+            <label for="stress-calm">Calm</label>
+            <input type="radio" name="stress" value="overwhelmed" id="stress-overwhelmed">
+            <label for="stress-overwhelmed">Overwhelmed</label>
+        </div>
+        
+        <div class="question">
+            <label for="age">Select your age group:</label>
+            <select name="age" id="age">
+                <option value="">--Select Age Group--</option>
+                <option value="under-20">Under 20</option>
+                <option value="20-40">20-40</option>
+                <option value="40-60">40-60</option>
+                <option value="over-60">Over 60</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label for="diet">How would you describe your typical diet?</label>
+            <input type="radio" name="diet" value="heavy" id="diet-heavy">
+            <label for="diet-heavy">Heavy and Rich</label>
+            <input type="radio" name="diet" value="balanced" id="diet-balanced">
+            <label for="diet-balanced">Balanced</label>
+            <input type="radio" name="diet" value="light" id="diet-light">
+            <label for="diet-light">Light</label>
+        </div>
+        
+        <div class="question">
+            <label for="sleep">How is your sleep quality?</label>
+            <input type="radio" name="sleep" value="poor" id="sleep-poor">
+            <label for="sleep-poor">Poor</label>
+            <input type="radio" name="sleep" value="average" id="sleep-average">
+            <label for="sleep-average">Average</label>
+            <input type="radio" name="sleep" value="excellent" id="sleep-excellent">
+            <label for="sleep-excellent">Excellent</label>
+        </div>
+        
+        <div class="question">
+            <label for="email">Enter your email (optional):</label>
+            <input type="email" name="email" id="email" placeholder="your-email@example.com">
+        </div>
+        
+        <div class="question">
+            <input type="checkbox" name="subscribe" id="subscribe">
+            <label for="subscribe">Subscribe to our newsletter for exclusive tips and updates.</label>
+        </div>
+        
+        <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result" style="display:none;">
+        <!-- Dynamic result content with affiliate recommendations will be injected here -->
+    </div>
+</main>
+
+<script>
+    function updateEnergyLabel(value) {
+        const energyLabel = document.getElementById('energy-label');
+        const levels = ["Low", "Moderate", "High"];
+        energyLabel.textContent = levels[value];
+    }
+
+    function submitQuiz() {
+        const energy = document.getElementById('energy').value;
+        const stress = document.querySelector('input[name="stress"]:checked');
+        const age = document.getElementById('age').value;
+        const diet = document.querySelector('input[name="diet"]:checked');
+        const sleep = document.querySelector('input[name="sleep"]:checked');
+        const email = document.getElementById('email').value;
+        const subscribe = document.getElementById('subscribe').checked;
+
+        // Simple validation to ensure required fields are filled
+        if (!stress || !age || !diet || !sleep) {
+            alert("Please fill out all required fields before submitting.");
+            return;
+        }
+
+        let resultText = "<h2>Your Wellness Profile</h2>";
+        resultText += "<p>Based on your responses, here's a snapshot of your current wellness:</p>";
+
+        // Energy level interpretation
+        const energyLevels = ["Low", "Moderate", "High"];
+        resultText += `<strong>Energy Level:</strong> ${energyLevels[energy]}<br>`;
+
+        // Stress response interpretation
+        if (stress) {
+            const stressResponse = stress.value === 'calm' ? "You're good at managing stress." : 
+                                    stress.value === 'irritable' ? "You tend to get irritated easily." :
+                                    "You often feel overwhelmed in stressful situations.";
+            resultText += `<strong>Stress Response:</strong> ${stressResponse}<br>`;
+        }
+
+        // Age group interpretation
+        const ageGroups = {
+            "under-20": "You are youthful and energetic.",
+            "20-40": "You're in your prime, juggling responsibilities and personal growth.",
+            "40-60": "You're at a stage where balance is key, and health is important.",
+            "over-60": "Wisdom comes with age. Prioritizing wellness is essential for longevity."
+        };
+        resultText += `<strong>Age Group:</strong> ${ageGroups[age]}<br>`;
+
+        // Diet interpretation
+        const dietMessage = diet.value === 'heavy' ? "You enjoy rich, hearty meals." :
+                             diet.value === 'balanced' ? "Your diet is well-balanced." :
+                             "You prefer lighter, easy-to-digest foods.";
+        resultText += `<strong>Diet:</strong> ${dietMessage}<br>`;
+
+        // Sleep quality interpretation
+        const sleepMessage = sleep.value === 'poor' ? "You may need to focus on improving sleep habits." :
+                             sleep.value === 'average' ? "Your sleep is average, but could be better." :
+                             "Your sleep quality is excellent, which is vital for overall well-being.";
+        resultText += `<strong>Sleep Quality:</strong> ${sleepMessage}<br>`;
+
+        // Affiliate Product Recommendations
+        resultText += "<h3>Recommended Herbal Products</h3>";
+        resultText += getAffiliateRecommendations(energy, stress.value, diet.value, sleep.value);
+
+        // Subscription confirmation
+        if (subscribe) {
+            resultText += "<strong>Subscription:</strong> You're subscribed to our newsletter! We'll send you personalized wellness tips and updates.<br>";
+        }
+
+        // Personalized email thank you
+        if (email) {
+            resultText += `<p>Thank you for sharing your email, ${email}! We'll send you exclusive content to support your wellness journey.</p>`;
+        }
+
+        // Display result
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = resultText;
+        resultDiv.style.display = "block";
+    }
+
+    function getAffiliateRecommendations(energy, stress, diet, sleep) {
+        let recommendations = "";
+
+        // Sample affiliate products based on quiz responses (replace with actual affiliate links)
+        if (energy == "0") { 
+            recommendations += "<p><strong>Energy Booster Tea:</strong> <a href='https://affiliate-link.com/energy-booster-tea'>Try this revitalizing herbal tea</a> to boost your energy.</p>";
+        } else if (energy == "2") {
+            recommendations += "<p><strong>Calming Chamomile Tea:</strong> <a href='https://affiliate-link.com/calming-chamomile-tea'>This tea can help you stay relaxed and balanced</a>.</p>";
+        }
+
+        if (stress === "irritable") {
+            recommendations += "<p><strong>Ashwagandha Supplements:</strong> <a href='https://affiliate-link.com/ashwagandha'>Great for managing irritability and promoting calmness.</a></p>";
+        } else if (stress === "overwhelmed") {
+            recommendations += "<p><strong>Lemon Balm Extract:</strong> <a href='https://affiliate-link.com/lemon-balm'>Helps to reduce feelings of overwhelm and anxiety.</a></p>";
+        }
+
+        if (diet === "heavy") {
+            recommendations += "<p><strong>Digestive Herbal Blend:</strong> <a href='https://affiliate-link.com/digestive-herbal-blend'>This blend supports digestion and eases heaviness after meals.</a></p>";
+        } else if (diet === "light") {
+            recommendations += "<p><strong>Nourishing Herbal Tonic:</strong> <a href='https://affiliate-link.com/herbal-tonic'>Perfect for maintaining energy levels with light diets.</a></p>";
+        }
+
+        if (sleep === "poor") {
+            recommendations += "<p><strong>Valerian Root Capsules:</strong> <a href='https://affiliate-link.com/valerian-root'>Helps improve sleep quality and relaxation.</a></p>";
+        }
+
+        return recommendations;
+    }
+</script>
 
     <!-- Footer -->
     <footer class="footer">
