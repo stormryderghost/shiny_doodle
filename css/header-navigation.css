@@ -59,8 +59,7 @@ nav .dropdown a:hover {
     background-color: #e76f51;
 }
 
-
-/* Dropdown Menu */
+/* If you want to use .nav-left for specific styling */
 .nav-left .dropdown {
     position: relative;
 }
