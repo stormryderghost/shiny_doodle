@@ -71,24 +71,33 @@
 <body>
     <!-- Header Navigation -->
     <header>
-        <nav>
-            <div class="nav-left">
-                <a href="/shiny_doodle/index.html">Home</a>
-                <a href="/shiny_doodle/herbal-remedies/blog.html">Blog</a>
-                <a href="/shiny_doodle/about.html">About</a>
-                <a href="/shiny_doodle/contact.html">Contact</a>
-                <a href="/shiny_doodle/categories.html">Categories</a>
+    <nav>
+        <div class="nav-left">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+            <div class="dropdown">
+                <a href="#">Herbal Remedies</a>
+                <div class="dropdown-content">
+                    <a href="/herbal-remedies/community-resources.html">Community Resources</a>
+                    <a href="/herbal-remedies/general-herbal-information.html">General Herbal Information</a>
+                    <a href="/herbal-remedies/herbal-recipes-diy-projects.html">Herbal Recipes DIY Projects</a>
+                    <a href="/herbal-remedies/herbal-remedies-for-specific-conditions.html">Herbal Remedies for Specific Conditions</a>
+                    <a href="/herbal-remedies/herbal-wisdom-folklore.html">Herbal Wisdom & Folklore</a>
+                </div>
             </div>
-            <div class="nav-right">
-                <a href="/shiny_doodle/privacy-policy.html">Privacy Policy</a>
-                <a href="/shiny_doodle/terms-of-service.html">Terms of Service</a>
-                <form action="/search" method="get" class="search-form">
-                    <input type="text" name="query" placeholder="Search..." aria-label="Search">
-                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
-        </nav>
-    </header>
+            <a href="/herbal-remedies/quiz.html">Quiz</a>
+            <a href="/herbal-remedies/blog.html">Blog</a>
+        </div>
+        <div class="search-form">
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
+        </div>
+    </nav>
+</header>
+
 
 
     <!-- Hero Section -->

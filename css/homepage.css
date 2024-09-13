@@ -1,36 +1,4 @@
-/* Header Navigation */
-header {
-    background-color: #264653;
-    color: #fff;
-}
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-}
-
-.nav-left a, .nav-right a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 0.5rem;
-}
-
-.search-form {
-    display: flex;
-}
-
-.search-form input[type="text"] {
-    padding: 0.5rem;
-}
-
-.search-form button {
-    background-color: #e76f51;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
 
 /* Hero Section */
 .hero {
