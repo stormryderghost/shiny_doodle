@@ -11,7 +11,8 @@ body {
 header.toolbar {
     background-color: #264653; /* Dark Blue */
     color: white;
-    padding: 10px 0;
+    padding: 10px 20px; /* Padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 header .toolbar-content {
@@ -31,20 +32,25 @@ header .toolbar-nav {
 header .toolbar-nav .nav-links,
 header .toolbar-nav .legal-links {
     display: flex;
-    flex: 1;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 header .toolbar-nav .nav-links a,
 header .toolbar-nav .legal-links a {
     color: white;
-    margin: 0 10px;
+    margin: 0 15px; /* Increased spacing */
     text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 
 header .toolbar-nav .nav-links a:hover,
 header .toolbar-nav .legal-links a:hover {
     background-color: #f4a261; /* Light Coral */
+    border-radius: 5px;
+    padding: 8px 12px; /* Added padding for better click area */
+    color: #264653; /* Dark Blue for text on hover */
 }
 
 header .toolbar-nav .search-form {
@@ -53,7 +59,12 @@ header .toolbar-nav .search-form {
     border: 1px solid #ddd;
     border-radius: 20px;
     overflow: hidden;
-    background-color: #f4f4f4;
+    background-color: #fff; /* White background for contrast */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+header .toolbar-nav .search-form:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 header .toolbar-nav .search-form input {
@@ -67,11 +78,12 @@ header .toolbar-nav .search-form input {
 header .toolbar-nav .search-form button {
     background-color: #2a9d8f;
     border: none;
-    padding: 8px 12px;
+    padding: 8px 16px; /* Increased padding for button */
     cursor: pointer;
     color: #fff;
     font-size: 16px;
     border-radius: 0 20px 20px 0;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 header .toolbar-nav .search-form button:hover {
@@ -89,6 +101,8 @@ header .toolbar-nav .cta-button a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 header .toolbar-nav .cta-button a:hover {
@@ -111,21 +125,21 @@ main#content ul {
 
 main#content ul li {
     background-color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Prevent image overflow */
+    padding: 15px; /* Increased padding for readability */
+    margin-bottom: 15px; /* Increased margin for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    overflow: hidden;
 }
 
 main#content ul li img {
-    max-width: 100%; /* Ensure images do not overflow their container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Prevent inline spacing issues */
-    margin: 0 auto; /* Center image horizontally */
-    border: 0; /* Remove any border styles */
-    box-shadow: none; /* Ensure no shadow effects */
-    background: transparent; /* Ensure no background color */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
 }
 
 main#content ul li a {
@@ -141,14 +155,16 @@ main#content ul li a:hover {
 footer.footer {
     background-color: #264653; /* Dark Blue */
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 footer.footer a {
     color: #2a9d8f; /* Teal */
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px; /* Increased spacing */
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 footer.footer a:hover {
@@ -159,6 +175,7 @@ footer.footer .social-links a {
     display: inline-block;
     margin: 0 10px;
     color: white;
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 footer.footer .social-links a:hover {
@@ -178,6 +195,7 @@ footer.footer .social-links a:hover {
     text-align: center;
     display: none; /* Hidden by default */
     z-index: 1000;
+    border-top: 1px solid #444; /* Subtle border for separation */
 }
 
 .cookie-consent p {
@@ -203,6 +221,7 @@ footer.footer .social-links a:hover {
     cursor: pointer;
     border-radius: 4px;
     margin-top: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .cookie-consent button:hover {
@@ -211,17 +230,30 @@ footer.footer .social-links a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header .toolbar-nav {
+        flex-direction: column;
+    }
+    
     header .toolbar-nav .nav-links,
     header .toolbar-nav .legal-links {
         flex-direction: column;
         align-items: flex-start;
     }
+    
     header .toolbar-nav .search-form {
         flex-direction: column;
+        width: 100%;
     }
+    
     header .toolbar-nav .search-form input,
     header .toolbar-nav .search-form button {
         border-radius: 0;
         margin-bottom: 5px;
+        width: 100%;
+    }
+    
+    header .toolbar-nav .cta-button {
+        margin-left: 0;
+        margin-top: 10px;
     }
 }
