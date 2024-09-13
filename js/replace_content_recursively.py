@@ -45,8 +45,7 @@ new_content = """
 
     <!-- Additional Scripts -->
    
-    <script src="/js/another-script.js" defer></script>
-
+  
     <!-- Favicon and Icons -->
     <link rel="icon" href="/images/favicon.ico" sizes="16x16" type="image/x-icon">
     <link rel="apple-touch-icon" href="/images/apple-icon.png" sizes="180x180">
