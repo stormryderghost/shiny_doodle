@@ -1,52 +1,71 @@
-/* quiz.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+/* General Quiz Container */
+.quiz-container {
+    background-color: #f9f9f9; /* Light background to fit with a modern design */
+    border: 1px solid #ddd; /* Light border to match the site’s border style */
+    border-radius: 8px; /* Rounded corners to align with modern design */
+    padding: 20px; /* Consistent padding for spacing */
+    margin: 20px auto; /* Centered with margin */
+    max-width: 800px; /* Maximum width to ensure it fits well */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-h1 {
-    color: #2a9d8f;
+/* Title */
+.quiz-container h2 {
+    color: #333; /* Darker text color for contrast */
+    font-size: 22px; /* Slightly larger font size for prominence */
+    margin-bottom: 20px; /* Space below title */
+    text-align: center; /* Center align to match typical design */
+    font-family: 'Lora', serif; /* Matching site fonts for consistency */
 }
 
-.question {
-    margin-bottom: 20px;
+/* Question Style */
+.quiz-container .question {
+    font-size: 18px; /* Font size to be readable */
+    margin-bottom: 15px; /* Spacing below questions */
+    font-family: 'Playfair Display', serif; /* Matching site fonts */
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+/* Answers */
+.quiz-container .answer {
+    display: block; /* Block display for better alignment */
+    margin: 10px 0; /* Space between answers */
+    padding: 12px; /* Padding inside the answer box */
+    border: 1px solid #ddd; /* Light border for answers */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+    font-family: 'Lora', serif; /* Consistent font style */
 }
 
-input[type="range"] {
-    width: 100%;
+/* Hover Effect for Answers */
+.quiz-container .answer:hover {
+    background-color: #e0e0e0; /* Light gray for hover effect */
+    border-color: #ccc; /* Darker border on hover */
 }
 
-input[type="radio"] {
-    margin-right: 10px;
+/* Selected Answer */
+.quiz-container .answer.selected {
+    background-color: #2a9d8f; /* Matching site color for selected answer */
+    color: #ffffff; /* White text for contrast */
+    border-color: #2a9d8f; /* Matching border color */
 }
 
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+/* Submit Button */
+.quiz-container .submit-button {
+    background-color: #e76f51; /* Button color matching site design */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size for readability */
+    cursor: pointer; /* Pointer cursor */
+    display: block; /* Block display for full width */
+    margin: 20px auto; /* Center align button */
+    transition: background-color 0.3s; /* Smooth color transition */
+    font-family: 'Playfair Display', serif; /* Consistent font style */
 }
 
-button {
-    background-color: #e76f51;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #f4a261;
-}
-
-#result {
-    margin-top: 20px;
+/* Hover Effect for Submit Button */
+.quiz-container .submit-button:hover {
+    background-color: #f4a261; /* Lighter color on hover */
 }
