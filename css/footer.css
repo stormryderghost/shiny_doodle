@@ -19,7 +19,8 @@
     flex-wrap: wrap;
 }
 
-.footer-left, .footer-right {
+.footer-left,
+.footer-right {
     flex: 1;
 }
 
@@ -29,10 +30,20 @@
     color: #fff; /* Ensure text is white */
 }
 
-.footer p {
+/* General Footer Section Styles */
+.footer-left,
+.footer-center,
+.footer-right {
+    margin: 10px 0;
+}
+
+.footer-left p,
+.footer-center p,
+.footer-right p {
     margin: 0;
 }
 
+/* Social Links Styles */
 .social-links {
     margin-top: 10px;
 }
@@ -47,6 +58,17 @@
 
 .social-links a:hover {
     color: #e76f51; /* Change color on hover */
+}
+
+/* Footer Links Styles */
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
 }
 
 /* Cookie Consent Styles */
