@@ -57,6 +57,8 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/shiny_doodle/css/homepage.css">
     <link rel="stylesheet" href="/shiny_doodle/css/header-navigation.css">
+	  <link rel="stylesheet" href="/shiny_doodle/css/footer.css">
+	
 
     <!-- Page Title -->
     <title>Shiny Doodle | DIY Herbal Remedies</title>
@@ -173,21 +175,51 @@
             <input type="submit" value="Subscribe">
         </form>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="/shiny_doodle/about.html">About Us</a> |
-                <a href="/shiny_doodle/contact.html">Contact</a> |
-                <a href="/shiny_doodle/privacy-policy.html">Privacy Policy</a> |
-                <a href="/shiny_doodle/terms-of-service.html">Terms of Service</a>
-            </div>
-            <p>&copy; 2024 Shiny Doodle. All Rights Reserved.</p>
-            <div class="social-media">
-                <a href="https://www.pinterest.com/shiny_doodle/" target="_blank" rel="noopener noreferrer">Pinterest</a>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>&copy; 2024 Shiny Doodle. All rights reserved.</p>
+        </div>
+        <div class="footer-center">
+            <p>Follow us on:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="path-to-facebook-icon.png" alt="Facebook" />
+                </a>
+                <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                    <img src="path-to-pinterest-icon.png" alt="Pinterest" />
+                </a>
             </div>
         </div>
-    </footer>
+        <div class="footer-right">
+            <a href="/privacy-policy.html">Privacy Policy</a> | 
+            <a href="/terms-of-service.html">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Cookie Consent -->
+<div class="cookie-consent" id="cookie-consent">
+    <p>We use cookies to ensure the best experience. <a href="/privacy-policy.html">Learn more</a></p>
+    <button id="accept-cookies">Accept</button>
+</div>
+
+<!-- JavaScript for Cookie Consent -->
+<script>
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        document.getElementById('cookie-consent').style.display = 'none';
+        // Optionally, you can set a cookie to remember user consent
+        document.cookie = "cookieConsent=true; path=/; max-age=" + 60*60*24*30;
+    });
+
+    // Check if cookie consent has been given
+    window.onload = function() {
+        if (document.cookie.indexOf("cookieConsent=true") !== -1) {
+            document.getElementById('cookie-consent').style.display = 'none';
+        }
+    };
+</script>
+
 </body>
 </html>
