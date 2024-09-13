@@ -1,49 +1,95 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Enigma of the Rosemary Plant - Shiny Doodle</title>
-    <meta name="description" content="Uncover the mysteries and historical significance of the rosemary plant. Explore its uses in folklore, traditional medicine, and modern applications.">
-    <meta name="keywords" content="Rosemary Plant, Rosemary Folklore, Herbal Remedies, Shiny Doodle, Historical Uses">
-    <meta property="og:title" content="The Enigma of the Rosemary Plant - Shiny Doodle">
-    <meta property="og:description" content="Uncover the mysteries and historical significance of the rosemary plant. Explore its uses in folklore, traditional medicine, and modern applications.">
-    <meta property="og:url" content="https://www.shiny-doodle.com/shiny_doodle/herbal-remedies/herbal-wisdom-folklore/the-enigma-of-the-rosemary-herb.html">
-    <meta property="og:image" content="https://www.shiny-doodle.com/images/rosemary-plant.jpg">
+    <meta name="description" content="Shiny Doodle offers DIY herbal remedies, tips, and holistic wellness guides for natural living.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Pinterest -->
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Enigma of the Rosemary Plant - Shiny Doodle">
-    <meta name="twitter:description" content="Uncover the mysteries and historical significance of the rosemary plant. Explore its uses in folklore, traditional medicine, and modern applications.">
-    <meta name="twitter:image" content="https://www.shiny-doodle.com/images/rosemary-plant.jpg">
-    <link rel="stylesheet" href="/shiny_doodle/css/blog.css">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9122029234085957"
-     crossorigin="anonymous"></script>
+    <meta property="og:title" content="Shiny Doodle - DIY Herbal Remedies">
+    <meta property="og:description" content="Explore natural remedies and holistic health tips.">
+    <meta property="og:image" content="https://stormryderghost.github.io/shiny_doodle/images/featured-image.jpg">
+    <meta property="og:url" content="https://stormryderghost.github.io/shiny_doodle/">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stormryderghost.github.io/shiny_doodle/about.html">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Analytics (replace YOUR_TRACKING_ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+
+    <!-- Additional Scripts -->
+    <script src="/js/link-checker.js" defer></script>
+    <script src="/js/another-script.js" defer></script>
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="/images/favicon.ico" sizes="16x16" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/apple-icon.png" sizes="180x180">
+
+    <!-- Structured Data (Schema.org for SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Shiny Doodle",
+      "url": "https://stormryderghost.github.io/shiny_doodle/",
+      "logo": "https://stormryderghost.github.io/shiny_doodle/images/logo.png",
+      "sameAs": [
+        "https://www.pinterest.com/shiny_doodle/"
+      ]
+    }
+    </script>
+
+    <!-- Stylesheet (for non-homepage) -->
+    <link rel="stylesheet" href="/css/blog.css" id="blogStylesheet">
+    
+    <!-- Page Title -->
+    <title>Shiny Doodle | DIY Herbal Remedies</title>
+
+    <!-- Conditional CSS for Non-Homepage -->
+    <script>
+        if (window.location.pathname === "/index.html") {
+            document.getElementById("blogStylesheet").remove();
+        }
+    </script> 
 </head>
 <body>
-   <!-- Header -->
-    <header class="toolbar">
-        <div class="toolbar-content">
-            <nav class="toolbar-nav">
-                <div class="nav-links">
-                    <a href="/shiny_doodle/index.html">Home</a>
-                    <a href="/shiny_doodle/herbal-remedies/blog.html">Blog</a>
-                    <a href="/shiny_doodle/about.html">About</a>
-                    <a href="/shiny_doodle/contact.html">Contact</a>
-                    <a href="/shiny_doodle/categories/categories.html">Categories</a>
-                </div>
-                <div class="legal-links">
-                    <a href="/shiny_doodle/privacy-policy.html">Privacy Policy</a>
-                    <a href="/shiny_doodle/terms-of-service.html">Terms of Service</a>
-                </div>
-                <div class="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="cta-button">
-                    <a href="/shiny_doodle/subscribe.html">Get Remedies Guide</a>
-                </div>
-            </nav>
-        </div>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="/shiny_doodle/index.html">Home</a>
+                <a href="/shiny_doodle/herbal-remedies/blog.html">Blog</a>
+                <a href="/shiny_doodle/about.html">About</a>
+                <a href="/shiny_doodle/contact.html">Contact</a>
+                <a href="/shiny_doodle/categories.html">Categories</a>
+            </div>
+            <div class="nav-right">
+                <a href="/shiny_doodle/privacy-policy.html">Privacy Policy</a>
+                <a href="/shiny_doodle/terms-of-service.html">Terms of Service</a>
+                <form action="/search" method="get" class="search-form">
+                    <input type="text" name="query" placeholder="Search..." aria-label="Search">
+                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
     </header>
+
     <main id="content">
         <article>
             <h1>The Enigma of the Rosemary Plant</h1>
@@ -59,7 +105,7 @@
                 <!-- Product 1 -->
                 <div class="product">
                     <h3>Rosemary Essential Oil</h3>
-                    <img src="/shiny_doodle/images/rosemary-essential-oil.jpg" alt="Rosemary Essential Oil" />
+                    <img data-src="/shiny_doodle/images/rosemary-essential-oil.jpg" alt="Rosemary Essential Oil" />
                     <p>This pure rosemary essential oil is perfect for aromatherapy, skincare, and personal care. Known for its soothing and invigorating properties, it can enhance your daily wellness routine.</p>
                     <p><strong>Customer Review:</strong> "A fantastic essential oil with a refreshing scent. Perfect for my aromatherapy sessions and skincare routines." - <em>Anna L.</em></p>
                     <p><strong>Key Benefits:</strong> High-quality essential oil, versatile uses in aromatherapy and skincare.</p>
@@ -69,7 +115,7 @@
                 <!-- Product 2 -->
                 <div class="product">
                     <h3>Rosemary Herbal Tea</h3>
-                    <img src="/shiny_doodle/images/rosemary-herbal-tea.jpg" alt="Rosemary Herbal Tea" />
+                    <img data-src="/shiny_doodle/images/rosemary-herbal-tea.jpg" alt="Rosemary Herbal Tea" />
                     <p>Enjoy the benefits of rosemary in a soothing herbal tea. This blend combines the fresh, aromatic flavors of rosemary with other herbs for a calming and healthful beverage.</p>
                     <p><strong>Customer Review:</strong> "A delightful herbal tea with a pleasant rosemary flavor. Perfect for relaxing and unwinding after a long day." - <em>James K.</em></p>
                     <p><strong>Key Benefits:</strong> Refreshing flavor, promotes relaxation and well-being.</p>
@@ -79,7 +125,7 @@
                 <!-- Product 3 -->
                 <div class="product">
                     <h3>Rosemary & Mint Shampoo</h3>
-                    <img src="/shiny_doodle/images/rosemary-mint-shampoo.jpg" alt="Rosemary & Mint Shampoo" />
+                    <img data-src="/shiny_doodle/images/rosemary-mint-shampoo.jpg" alt="Rosemary & Mint Shampoo" />
                     <p>This invigorating shampoo combines rosemary and mint to stimulate the scalp and promote healthy hair growth. Ideal for refreshing and revitalizing your hair care routine.</p>
                     <p><strong>Customer Review:</strong> "My hair feels revitalized and refreshed after using this shampoo. The rosemary and mint combination is fantastic!" - <em>Laura M.</em></p>
                     <p><strong>Key Benefits:</strong> Stimulates scalp, promotes healthy hair growth, refreshing scent.</p>

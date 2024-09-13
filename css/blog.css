@@ -47,10 +47,35 @@ header .toolbar-nav .legal-links a:hover {
     background-color: #f4a261; /* Light Coral */
 }
 
-header .toolbar-nav .search-icon {
-    margin-left: auto;
-    padding: 10px 20px;
-    color: white;
+header .toolbar-nav .search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+header .toolbar-nav .search-form input {
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    flex: 1;
+    border-radius: 20px 0 0 20px;
+}
+
+header .toolbar-nav .search-form button {
+    background-color: #2a9d8f;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 0 20px 20px 0;
+}
+
+header .toolbar-nav .search-form button:hover {
+    background-color: #1f7a6f;
 }
 
 header .toolbar-nav .cta-button {
@@ -90,9 +115,9 @@ main#content ul li {
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent image overflow */
 }
 
-/* Ensure images fit within their container */
 main#content ul li img {
     max-width: 100%; /* Ensure images do not overflow their container */
     height: auto; /* Maintain aspect ratio */
@@ -103,12 +128,6 @@ main#content ul li img {
     background: transparent; /* Ensure no background color */
 }
 
-/* Ensure no unwanted effects on image containers */
-main#content ul li {
-    overflow: hidden; /* Prevent image overflow */
-}
-
-/* Ensure links have consistent styles */
 main#content ul li a {
     color: #2a9d8f; /* Teal */
     text-decoration: none;
@@ -144,7 +163,9 @@ footer.footer .social-links a {
 
 footer.footer .social-links a:hover {
     color: #2a9d8f; /* Teal */
-}/* Cookie Consent Pop-Up Styles */
+}
+
+/* Cookie Consent Pop-Up Styles */
 .cookie-consent {
     position: fixed;
     bottom: 0;
@@ -188,3 +209,19 @@ footer.footer .social-links a:hover {
     background-color: #e1b12c;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .toolbar-nav .nav-links,
+    header .toolbar-nav .legal-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .toolbar-nav .search-form {
+        flex-direction: column;
+    }
+    header .toolbar-nav .search-form input,
+    header .toolbar-nav .search-form button {
+        border-radius: 0;
+        margin-bottom: 5px;
+    }
+}

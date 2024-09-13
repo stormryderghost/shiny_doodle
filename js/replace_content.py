@@ -1,4 +1,14 @@
+import os
+import re
 
+# Define the directory containing HTML files
+directory = r'C:\Users\Aarons\Documents\GitHub\shiny_doodle'
+
+# Define the pattern to match from <!DOCTYPE html> to </header>
+pattern = re.compile(r'<!DOCTYPE html>.*?(</header>)', re.DOTALL)
+
+# Define the new content to replace
+new_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,42 +99,19 @@
             </div>
         </nav>
     </header>
+"""
 
+# Process each HTML file in the directory
+for filename in os.listdir(directory):
+    if filename.endswith('.html'):
+        file_path = os.path.join(directory, filename)
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
 
-    <section>
-        <p>If you're dealing with respiratory problems, the following herbs can provide relief:</p>
-        <ul>
-            <li><strong>Mullein</strong> – Soothes the respiratory tract and reduces inflammation.</li>
-            <li><strong>Licorice Root</strong> – Relieves sore throats and acts as an expectorant.</li>
-            <li><strong>Eucalyptus</strong> – Helps clear sinuses and ease breathing.</li>
-        </ul>
-        <p>Use these herbs in tea, lozenges, or steam inhalations.</p>
-    </section><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herbal Remedies for Respiratory Issues</title>
-</head>
-<body>
-    <h1>Herbal Remedy for Respiratory Issues</h1>
-    <p>Licorice root is commonly used to soothe the respiratory system and reduce irritation in the throat and lungs.</p>
-    <p>Licorice root supplements or tea can help manage respiratory discomfort:</p>
+        # Replace the content from <!DOCTYPE html> to </header>
+        new_file_content = pattern.sub(new_content, content)
 
-    <!-- Affiliate product suggestion -->
-    <h2>Recommended Product</h2>
-    <a href="https://affiliate-link.com/licorice-root" target="_blank">
-        <img data-src="/path-to-image/licorice-root.jpg" alt="Licorice Root Supplement">
-    </a>
-    <p><a href="https://affiliate-link.com/licorice-root" target="_blank">Licorice Root Tea - Respiratory Health Support</a></p>
-    <p>Licorice root tea helps soothe the respiratory system. Click the link to learn more and buy this product.</p>
-</body>
-</html>
+        with open(file_path, 'w', encoding='utf-8') as file:
+            file.write(new_file_content)
 
-
-    <footer>
-        <p>&copy; 2024 Shiny Doodle. All rights reserved.</p>
-        <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-service.html">Terms of Service</a>
-    </footer>
-</body>
-</html>
+print("Replacement complete.")
