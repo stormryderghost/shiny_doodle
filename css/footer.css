@@ -26,6 +26,7 @@
 .footer-center {
     flex: 2;
     text-align: center;
+    color: #fff; /* Ensure text is white */
 }
 
 .footer p {
