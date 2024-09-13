@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+Allow: /shiny_doodle/
+Sitemap: https://stormryderghost.github.io/shiny-doodle/sitemap.xml
