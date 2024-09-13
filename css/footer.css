@@ -39,22 +39,13 @@
 .social-links a {
     margin: 0 10px;
     display: inline-block;
-}
-
-.social-links img {
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
-    vertical-align: middle;
-}
-
-.footer-right a {
     color: #fff;
+    font-size: 18px; /* Adjust size as needed */
     text-decoration: none;
-    margin: 0 10px;
 }
 
-.footer-right a:hover {
-    text-decoration: underline;
+.social-links a:hover {
+    color: #e76f51; /* Change color on hover */
 }
 
 /* Cookie Consent Styles */
