@@ -43,7 +43,7 @@ new_content = """
         gtag('config', 'YOUR_TRACKING_ID');
     </script>
 
-    <!-- Additional Scripts -->
+    <!-- Additional Scripts --><script src="js/lazy-load.js"></script>
    
   
     <!-- Favicon and Icons -->
