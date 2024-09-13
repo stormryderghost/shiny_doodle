@@ -1,4 +1,4 @@
-<script>
+
     document.addEventListener('DOMContentLoaded', function() {
         // Function to load images
         function loadImages(entries, observer) {
@@ -49,4 +49,3 @@
         window.addEventListener('scroll', throttle(loadImages, 200));
         window.addEventListener('resize', throttle(loadImages, 200));
     });
-</script>
