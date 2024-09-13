@@ -1,4 +1,4 @@
-<script>
+
     document.addEventListener('DOMContentLoaded', function() {
         const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -20,4 +20,4 @@
             });
         });
     });
-</script>
+
