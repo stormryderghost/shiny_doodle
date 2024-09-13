@@ -1,263 +1,154 @@
-/* General Styles */
-body {
-    background-color: #f4f4f4; /* Light Gray */
-    color: #333; /* Dark Gray */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Header Navigation */
+header {
+    background-color: #264653;
+    color: #fff;
 }
 
-/* Header */
-header.toolbar {
-    background-color: #264653; /* Dark Blue */
-    color: white;
-    padding: 20px;
-}
-
-header .toolbar-content {
+nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 1rem;
 }
 
-header .toolbar-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-header .toolbar-nav .nav-links,
-header .toolbar-nav .legal-links {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-}
-
-header .toolbar-nav .nav-links a,
-header .toolbar-nav .legal-links a {
-    color: white;
-    margin: 0 10px;
+.nav-left a, .nav-right a {
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color transition */
+    margin: 0 0.5rem;
 }
 
-header .toolbar-nav .nav-links a:hover,
-header .toolbar-nav .legal-links a:hover {
-    color: #f4a261; /* Light Coral */
-}
-
-header .toolbar-nav .search-icon {
-    margin-left: auto;
-}
-
-header .toolbar-nav .cta-button {
-    margin-left: 20px;
-    flex-shrink: 0;
-}
-
-header .toolbar-nav .cta-button a {
-    background-color: #e76f51; /* Coral */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth background color transition */
-}
-
-header .toolbar-nav .cta-button a:hover {
-    background-color: #f4a261; /* Light Coral */
-}
-
-/* Ensure Mailchimp Pop-up is on top */
-#mcjs {
-    z-index: 9999; /* Ensure the pop-up is on top */
-    position: fixed; /* Keep it in place on the screen */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+.search-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto; /* Allow scrolling if the content is larger than the viewport */
+}
+
+.search-form input[type="text"] {
+    padding: 0.5rem;
+}
+
+.search-form button {
+    background-color: #e76f51;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #D1C4E9; /* Calm Lavender */
-    color: #4E342E; /* Deep Brown */
-    padding: 50px;
+    background: url('https://github.com/stormryderghost/shiny_doodle/blob/main/images/hero.png?raw=true') no-repeat center center;
+    background-size: cover;
+    color: #fff;
     text-align: center;
+    padding: 2rem;
 }
 
-.hero img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: none; /* Remove any shadow effects */
-    background: transparent; /* Ensure no background color */
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.typewriter {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.btn-primary {
+    background-color: #e76f51;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
 }
 
 /* Main Content Area */
-main#content {
-    padding: 20px;
+#featured-posts, #categories, #recent-posts {
+    padding: 2rem;
 }
 
-#featured-posts, #categories, #recent-posts, #newsletter {
-    margin-bottom: 40px;
+.post-grid {
+    display: flex;
+    gap: 1rem;
 }
 
-#featured-posts h2, #categories h2, #recent-posts h2, #newsletter h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #2a9d8f; /* Teal */
-}
-
-.post-grid, .category-grid, .recent-posts-list {
+.category-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1rem;
 }
 
-.post, .category, .recent-posts-list .post {
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: white; /* Ensure background color */
+.category, .post {
+    flex: 1;
+    margin: 0.5rem;
 }
 
-.post img, .category img, .recent-posts-list .post img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: none; /* Remove any shadow effects */
-    background: transparent; /* Ensure no background color */
+.category img, .post img {
+    width: 100%;
 }
 
-/* Newsletter Section */
-#newsletter form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Subscription Form */
+#mc_embed_shell {
+    padding: 1rem;
 }
 
-#newsletter input[type="email"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #4E342E; /* Deep Brown */
-    border-radius: 5px;
-    width: 100%; /* Ensure full width for better UX */
-    max-width: 400px; /* Limit max width for better form layout */
+#mc_embed_signup {
+    background: #fff;
+    padding: 1rem;
 }
 
-#newsletter .btn-secondary {
-    background-color: #264653; /* Dark Blue */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+.mc-field-group {
+    margin-bottom: 1rem;
 }
 
-#newsletter .btn-secondary:hover {
-    background-color: #e76f51; /* Coral */
+.response {
+    margin-top: 1rem;
+}
+
+.button {
+    background-color: #e76f51;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
 }
 
 /* Footer */
-footer.footer {
-    background-color: #264653; /* Dark Blue */
-    color: white;
-    padding: 20px;
+.footer {
+    background-color: #264653;
+    color: #fff;
+    padding: 1rem;
     text-align: center;
 }
 
-footer .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.footer-left, .footer-center, .footer-right {
+    margin: 0.5rem 0;
 }
 
-footer .footer-left, footer .footer-center, footer .footer-right {
-    flex: 1 1 30%;
-    margin: 10px 0;
-}
-
-footer .footer-center p a {
-    color: white;
+.social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color transition */
 }
 
-footer .footer-center p a:hover {
-    color: #f4a261; /* Light Coral */
+.refferal_badge {
+    width: 220px;
 }
 
-footer .social-links a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color transition */
+/* Cookie Consent Pop-Up */
+#cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    display: none;
+    padding: 1rem;
+    text-align: center;
 }
 
-footer .social-links a:hover {
-    color: #f4a261; /* Light Coral */
-}
-
-/* Mailchimp Pop-up Styles */
-#mcjs .mc-popup {
-    background-color: white; /* Background color for the pop-up */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px;
-    max-width: 90%; /* Make it responsive */
-    width: 600px; /* Set a default width */
-    margin: auto; /* Center horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-}
-
-#mcjs .mc-popup h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    color: #333; /* Dark Gray */
-}
-
-#mcjs .mc-popup p {
-    margin-bottom: 20px;
-    color: #666; /* Medium Gray */
-}
-
-#mcjs .mc-popup input[type="email"] {
-    width: calc(100% - 20px); /* Full width minus padding */
-    padding: 10px;
-    border: 1px solid #ccc; /* Light Gray */
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-#mcjs .mc-popup button {
-    background-color: #e76f51; /* Coral */
-    color: white;
+.cookie-consent-button {
+    background-color: #e76f51;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease; /* Smooth background color transition */
-}
-
-#mcjs .mc-popup button:hover {
-    background-color: #f4a261; /* Light Coral */
-}
-
-/* Optional: Add a close button for the pop-up */
-#mcjs .mc-popup .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #333; /* Dark Gray */
 }
