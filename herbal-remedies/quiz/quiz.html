@@ -32,10 +32,6 @@
         gtag('config', 'YOUR_TRACKING_ID');
     </script>
 
-    <!-- Additional Scripts -->
-    <script src="/js/link-checker.js" defer></script>
-    <script src="/js/another-script.js" defer></script>
-
     <!-- Favicon and Icons -->
     <link rel="icon" href="/images/favicon.ico" sizes="16x16" type="image/x-icon">
     <link rel="apple-touch-icon" href="/images/apple-icon.png" sizes="180x180">
@@ -54,18 +50,11 @@
     }
     </script>
 
-    <!-- Stylesheet (for non-homepage) -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="/shiny_doodle/css/blog.css" id="blogStylesheet">
-    
+
     <!-- Page Title -->
     <title>Shiny Doodle | Discover Your Dosha Type</title>
-
-    <!-- Conditional CSS for Non-Homepage -->
-    <script>
-        if (window.location.pathname === "/shiny_doodle/index.html") {
-            document.getElementById("blogStylesheet").remove();
-        }
-    </script> 
 </head>
 <body>
     <!-- Header Navigation -->
@@ -154,7 +143,7 @@
         </form>
 
         <div id="result" style="display:none;">
-            <!-- Dynamic result content with affiliate recommendations will be injected here -->
+            <!-- Dynamic result content will be injected here -->
         </div>
     </main>
 
@@ -191,25 +180,36 @@
         }
 
         function submitQuiz() {
-            // Collecting user input
             const form = document.getElementById('quiz-form');
             const formData = new FormData(form);
             const email = formData.get('email');
+            const subscribe = formData.get('subscribe');
 
-            // Generate the result message
             let resultMessage = '<h2>Your Wellness Profile:</h2>';
             resultMessage += '<p>Thank you for taking our quiz!</p>';
 
-            // Email subscription handling
-            if (formData.get('subscribe')) {
+            // Calculate result based on input
+            const energyLevel = document.querySelector('input[name="energy"]').value;
+            const stressResponse = formData.get('stress');
+            const ageGroup = formData.get('age');
+            const dietType = formData.get('diet');
+            const sleepQuality = formData.get('sleep');
+
+            // Example result calculation (to be refined based on actual criteria)
+            const energyLabels = ['Low', 'Moderate', 'High'];
+            resultMessage += `<p>Your energy level is: ${energyLabels[energyLevel]}</p>`;
+            resultMessage += `<p>Stress response: ${stressResponse}</p>`;
+            resultMessage += `<p>Age group: ${ageGroup}</p>`;
+            resultMessage += `<p>Diet type: ${dietType}</p>`;
+            resultMessage += `<p>Sleep quality: ${sleepQuality}</p>`;
+
+            if (subscribe) {
                 resultMessage += `<p>You have subscribed with email: ${email}</p>`;
             }
 
-            // Display the result
             document.getElementById('result').innerHTML = resultMessage;
             document.getElementById('result').style.display = 'block';
         }
     </script>
 </body>
 </html>
-
