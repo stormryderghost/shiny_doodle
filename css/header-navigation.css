@@ -1,41 +1,64 @@
-/* Header Navigation */
-header {
-    background-color: #264653;
-    color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Navigation Bar */
+/* General styles for the navigation */
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #264653;
+    padding: 1rem;
 }
 
-/* Left and Right Navigation Links */
-.nav-left, .nav-right {
+/* Navigation links styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
 }
 
-/* Navigation Links */
+nav li {
+    position: relative;
+    margin-right: 1rem;
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease;
+    padding: 0.5rem;
+    display: block;
 }
 
-nav a:hover {
-    color: #f4a261;
+/* Dropdown styles */
+nav .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positioning dropdown below the parent */
+    left: 0;
+    background-color: #2a9d8f;
+    padding: 1rem;
+    min-width: 200px;
+    z-index: 1;
 }
+
+nav li:hover .dropdown {
+    display: block; /* Display dropdown on hover */
+}
+
+nav .dropdown li {
+    margin: 0;
+}
+
+/* Styling for dropdown links */
+nav .dropdown a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: #fff;
+    background-color: #2a9d8f;
+    text-decoration: none;
+}
+
+nav .dropdown a:hover {
+    background-color: #e76f51;
+}
+
 
 /* Dropdown Menu */
 .nav-left .dropdown {
