@@ -3,11 +3,11 @@
     background-color: #264653;
     color: #fff;
     padding: 20px;
-    text-align: center;
     font-family: Arial, sans-serif;
     position: relative;
     bottom: 0;
     width: 100%;
+    text-align: center; /* Ensure text is centered in the footer */
 }
 
 .footer-content {
@@ -19,31 +19,29 @@
     flex-wrap: wrap;
 }
 
-.footer-left,
-.footer-right {
+.footer-left, .footer-right {
     flex: 1;
 }
 
 .footer-center {
     flex: 2;
-    text-align: center;
+    text-align: center; /* Center text within the center section */
     color: #fff; /* Ensure text is white */
 }
 
-/* General Footer Section Styles */
-.footer-left,
-.footer-center,
-.footer-right {
-    margin: 10px 0;
-}
-
-.footer-left p,
-.footer-center p,
-.footer-right p {
+.footer-center p {
     margin: 0;
 }
 
-/* Social Links Styles */
+.footer-center a {
+    color: #fff; /* Ensure links are white */
+    text-decoration: none; /* Optional: remove underline */
+}
+
+.footer-center a:hover {
+    color: #e76f51; /* Change color on hover */
+}
+
 .social-links {
     margin-top: 10px;
 }
@@ -58,17 +56,6 @@
 
 .social-links a:hover {
     color: #e76f51; /* Change color on hover */
-}
-
-/* Footer Links Styles */
-.footer-right a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-right a:hover {
-    text-decoration: underline;
 }
 
 /* Cookie Consent Styles */
